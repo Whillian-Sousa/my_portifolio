@@ -1,0 +1,48 @@
+ BCW_  ABOUT | WORK | SKILLS | CONTACT  (Search) ( * Star on GitHub | Linkedin )
+ 
+ > ssh el.psy.congro.sh_
+ 
+ HERO -> Photo
+  - Who I Am 
+  	-> Whill is a site maker 
+  	-> Short Description
+  
+  
+  
+  
+  - What I Do -> skills
+	-> My Work
+  
+  
+  
+
+ CONTACT -> 
+ 	     Let’s Talk
+      	  - Email | Address
+ 	  	[FORM]
+ 
+ 
+ 
+ 
+ FOOTER -> (Borders?)             
+______________________________________
+ 			ABOUT
+          Frase         WORK 
+                        SKILLS 
+                        CONTACT 
+ _____________________________________                    
+ LOGO | Copyright  2024 whillianSousa   | socials
+     
+ el psy congro
+ dont panic!
+
+BG -> ##292D3E
+bege -> ##FFFBE8
+pinky -> #FFAFF3
+
+- el psy congro
+- pinky
+- panic
+- tuturu
+- metal upa
+- okey dokey
