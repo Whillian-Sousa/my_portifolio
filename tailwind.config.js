@@ -38,6 +38,7 @@ export default {
           12: "#2E2A41",
           13: "#6C7275",
           14: "#292D3E",
+          15: "linear-gradient(to top right,#7ADB78, #858DFF, #9F53FF, #79FFF7, #FF98E2)",
         },
       },
       fontFamily: {
@@ -45,6 +46,7 @@ export default {
         code: "var(--font-code)",
         grotesk: "var(--font-grotesk)",
         lexend: "var(--font-lexend)",
+        inter: "var(--font-inter)",
       },
       letterSpacing: {
         tagline: ".15em",
@@ -58,12 +60,59 @@ export default {
         15: ".15",
       },
       animation: {
+        blob: "blob 7s infinite",
         "loop-scroll": "loop-scroll 20s linear infinite",
+        pulse: "pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+        tilt: "tilt 10s infinite linear",
+        gradient: "gradient 6s linear infinite",
+        "spin-slow": "spin 4s linear infinite",
+        despin: "despin 4s linear infinite",
       },
       keyframes: {
+        tilt: {
+          "0%, 50%, 100%": {
+            transform: "rotate(0deg)",
+          },
+          "25%": {
+            transform: "rotate(1deg)",
+          },
+          "75%": {
+            transform: "rotate(-1deg)",
+          },
+        },
+        gradient: {
+          "0%": { backgroundPosition: "0% 50%" },
+          "100%": { backgroundPosition: "100% 50%" },
+        },
+        blob: {
+          "0%": {
+            transform: "translate(0px, 0px) scale(1)",
+          },
+          "33%": {
+            transform: "translate(30px, -50px) scale(1.1)",
+          },
+          "66%": {
+            transform: "translate(-20px, 20px) scale(0.9)",
+          },
+          "100%": {
+            transform: "translate(0px, 0px) scale(1)",
+          },
+        },
         "loop-scroll": {
           from: { transform: "translateX(0)" },
           to: { transform: "translateX(-100%)" },
+        },
+        pulse: {
+          "0%, 100%": { opacity: 1 },
+          "50%": { opacity: 0 },
+        },
+        despin: {
+          from: {
+            transform: "rotate(360deg)",
+          },
+          to: {
+            transform: "rotate(0deg)",
+          },
         },
       },
       transitionDuration: {
@@ -84,10 +133,18 @@ export default {
         DEFAULT: "0.0625rem",
       },
       backgroundImage: {
+        texture: `url('./src/assets/grainy.svg')`,
+        noisy: `url('./src/assets/noisy.svg')`,
         "radial-gradient": "radial-gradient(var(--tw-gradient-stops))",
-        parallax: "url(assets/background.png)",
+        parallax: "linear-gradient",
         "linear-gradient":
-          "linear-gradient(to top right,#FFC876, #79FFF7, #9F53FF, #FF98E2)",
+          "linear-gradient(to top right,#9f53ff, #ff98e2, #ffc876)",
+        "form-gradient":
+          "linear-gradient(to bottom, #0E0C15, #FF98E2, #0E0C15)",
+        "footer-gradient":
+          "linear-gradient(to top left, #0E0C15, #FF98E2, #0E0C15)",
+        "linear-slide-l": "linear-gradient(to left, transparent, #0E0C15 )",
+        "linear-slide-r": "linear-gradient(to right, transparent, #0E0C15 )",
         "linear-gradient-hover":
           "linear-gradient(to bottom left,#FFC876, #79FFF7, #9F53FF, #FF98E2)",
         "conic-gradient":
@@ -140,8 +197,7 @@ export default {
           "@apply text-sm": {},
         },
         ".tagline": {
-          "@apply font-grotesk font-light text-xs tracking-tagline uppercase":
-            {},
+          "@apply font-lexend font-light text-xs tracking-tagline": {},
         },
         ".quote": {
           "@apply font-code text-lg leading-normal": {},
