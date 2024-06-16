@@ -2,10 +2,8 @@ import { useEffect, useRef } from "react";
 import { useScroll, motion } from "framer-motion";
 
 const CircleLetters = ({ progress }) => {
-  const container = useRef();
   const texts = useRef([]);
   const { scrollYProgress } = useScroll({
-    target: container,
     offset: ["start end", "end end"],
   });
 

@@ -17,10 +17,6 @@
   color-scheme: dark;
 }
 
-* {
-  scroll-behavior: smooth;
-}
-
 @layer utilities {
   /* Hide scrollbar for Chrome, Safari and Opera */
   .no-scrollbar::-webkit-scrollbar {
@@ -66,6 +62,12 @@
   .textarea {
     @apply w-full h-full p-6 rounded-lg resize-none;
   }
+}
+
+.btn::before {
+  transition:
+    width 0.5s,
+    height 0.5s;
 }
 
 .gradient-text {

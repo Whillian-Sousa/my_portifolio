@@ -4,7 +4,6 @@ import { Environment, OrbitControls } from "@react-three/drei";
 import { useScroll, useTransform, useSpring } from "framer-motion";
 import Model from "./Model";
 import { useProgress, Html } from "@react-three/drei";
-import CircleLetters from "./CicleLetters";
 
 function Loader() {
   const { loading, active } = useProgress();
@@ -25,7 +24,7 @@ const Moon3d = () => {
     <div ref={container} className="h-[490vh]">
       <div className="sticky top-0 h-[100vh]">
         <div className="absolute inset-0 bg-color-2 top-[19rem] left-[8rem] content-center blur-[6rem] opacity-70 rounded-full size-[22rem]" />
-        <CircleLetters progress={smoothProgress} />
+        {/* <CircleLetters progress={smoothProgress} /> */}
         <Canvas gl={{ antialias: true }} dpr={[1, 1.5]}>
           <ambientLight intensity={3} />
           <OrbitControls enableZoom={false} enablePan={false} />

@@ -1,49 +1,9 @@
-import * as THREE from "three";
-import { hero } from "../assets";
-import { OrbitControls, PerspectiveCamera, View } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-
-// shaders
-const vertexShader = `
-    varying vec2 vUv;
-    void main() {
-      vUv = uv;
-      gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
-    }
-`;
-
-const fragmentShader = `
-    varying vec2 vUv;
-    uniform sampler2D u_texture;    
-    uniform vec2 u_mouse;
-    uniform vec2 u_prevMouse;
-    uniform float u_aberrationIntensity;
-
-    void main() {
-        vec2 gridUV = floor(vUv * vec2(20.0, 20.0)) / vec2(20.0, 20.0);
-        vec2 centerOfPixel = gridUV + vec2(1.0/20.0, 1.0/20.0);
-        
-        vec2 mouseDirection = u_mouse - u_prevMouse;
-        
-        vec2 pixelToMouseDirection = centerOfPixel - u_mouse;
-        float pixelDistanceToMouse = length(pixelToMouseDirection);
-        float strength = smoothstep(0.3, 0.0, pixelDistanceToMouse);
- 
-        vec2 uvOffset = strength * - mouseDirection * 0.2;
-        vec2 uv = vUv - uvOffset;
-
-        vec4 colorR = texture2D(u_texture, uv + vec2(strength * u_aberrationIntensity * 0.01, 0.0));
-        vec4 colorG = texture2D(u_texture, uv);
-        vec4 colorB = texture2D(u_texture, uv - vec2(strength * u_aberrationIntensity * 0.01, 0.0));
-
-        gl_FragColor = vec4(colorR.r, colorG.g, colorB.b, 1.0);
-    }
-`;
+import * as THREE from "three";
 
 const ImageHover = () => {
+  const imageContainer = useRef(null);
   // variables
-  const imageContainer = document.getElementById("imageContainer");
-  const imageElement = document.getElementById("myImage");
 
   let easeFactor = 0.02;
   let scene, camera, renderer, planeMesh;
@@ -53,53 +13,6 @@ const ImageHover = () => {
   let aberrationIntensity = 0.0;
   let lastPosition = { x: 0.5, y: 0.5 };
   let prevPosition = { x: 0.5, y: 0.5 };
-
-  function initializeScene(texture) {
-    //   scene creation
-    scene = new THREE.Scene();
-
-    // camera setup
-    camera = new THREE.PerspectiveCamera(
-      80,
-      //imageElement.offsetWidth / imageElement.offsetHeight,
-      0.01,
-      10,
-    );
-    camera.position.z = 1;
-
-    //   uniforms
-    let shaderUniforms = {
-      u_mouse: { type: "v2", value: new THREE.Vector2() },
-      u_prevMouse: { type: "v2", value: new THREE.Vector2() },
-      u_aberrationIntensity: { type: "f", value: 0.0 },
-      u_texture: { type: "t", value: texture },
-    };
-
-    //   creating a plane mesh with materials
-    planeMesh = new THREE.Mesh(
-      new THREE.PlaneGeometry(2, 2),
-      new THREE.ShaderMaterial({
-        uniforms: shaderUniforms,
-        vertexShader,
-        fragmentShader,
-      }),
-    );
-
-    //   add mesh to scene
-    scene.add(planeMesh);
-
-    //   render
-    renderer = new THREE.WebGLRenderer();
-    renderer.setSize(imageElement.offsetWidth, imageElement.offsetHeight);
-
-    //   create a canvas
-    imageContainer.appendChild(renderer.domElement);
-  }
-
-  // use the existing image from html in the canvas
-  initializeScene(new THREE.TextureLoader().load(imageElement.src));
-
-  animateScene();
 
   function animateScene() {
     requestAnimationFrame(animateScene);
@@ -143,7 +56,7 @@ const ImageHover = () => {
 
   function handleMouseEnter(event) {
     easeFactor = 0.02;
-    //let rect = imageContainer.getBoundingClientRect();
+    let rect = imageContainer.getBoundingClientRect();
 
     mousePosition.x = targetMousePosition.x =
       (event.clientX - rect.left) / rect.width;
@@ -156,18 +69,31 @@ const ImageHover = () => {
     targetMousePosition = { ...prevPosition };
   }
 
+  //New Code
+
+  const uniforms = useRef({
+    uTexture: { value: texture[0] },
+    uDelta: { value: { x: 0, y: 0 } },
+    uOpacity: { value: 1 },
+
+    u_mouse: { value: new THREE.Vector2() },
+    u_prevMouse: { value: new THREE.Vector2() },
+    u_aberrationIntensity: { value: 0.0 },
+    u_texture: { value: texture },
+  });
+
   return (
-    <div
-      id="imageContainer"
-      className="relative overflow-hidden flex justify-center items-center rounded-full max-w-[100%] transitions-all hover:saturate-200"
-    >
-      <img
-        id="myImage"
-        className="absolute inset-0 object-cover"
-        src={hero}
-        width="100%"
-        height="100%"
-      />
+    <div className="h-full w-full">
+      <Canvas>
+        <mesh scale={scale} ref={imageContainer} position-x={x} position-y={y}>
+          <planeGeometry args={[1, 1, 15, 15]} />
+          <shaderMaterial
+            fragmentShader={fragmentShader}
+            vertexShader={vertexShader}
+            uniforms={uniforms.current}
+          />
+        </mesh>
+      </Canvas>
     </div>
   );
 };

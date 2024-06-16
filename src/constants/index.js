@@ -1,6 +1,14 @@
 import {
   gitColor,
   githubSocials,
+  img0,
+  img1,
+  img2,
+  img3,
+  img4,
+  img5,
+  img6,
+  img7,
   instagram,
   javascript,
   jsColor,
@@ -9,10 +17,6 @@ import {
   nodeGem,
   react,
   reactColor,
-  roadmap1,
-  roadmap2,
-  roadmap3,
-  roadmap4,
   tailwind,
   tailwindColor,
   telegram,
@@ -46,7 +50,7 @@ export const navigation = [
 
 export const heroIcons = [react, tailwind, typescript, node];
 
-export const companyLogos = [
+export const logos = [
   reactColor,
   tailwindColor,
   typescriptColor,
@@ -55,39 +59,28 @@ export const companyLogos = [
   gitColor,
 ];
 
-export const roadmap = [
+export const space = [img0, img1, img2, img3, img4, img5, img6, img7];
+
+export const techList = [
   {
     id: "0",
-    title: "Choose the best for your project",
-    text: "Build your world, rise your brand. Give to your customers an experience that social media won't offers.",
-    date: "May 2024",
-    status: "done",
-    imageUrl: roadmap1,
-    colorful: true,
+    name: "React",
+    color: "#AC6AFF",
   },
   {
     id: "1",
-    title: "Animate anything",
-    text: "Add game-like elements, such as badges or leaderboards, to incentivize users to engage with the chatbot more frequently.",
-    date: "May 2024",
-    status: "progress",
-    imageUrl: roadmap2,
+    name: "Next.js",
+    color: "#FF98E2",
   },
   {
     id: "2",
-    title: "Scroll to everywhere",
-    text: "In any direction you desire. Because only developers likes Shortcuts.",
-    date: "Apr 2024",
-    status: "done",
-    imageUrl: roadmap3,
+    name: "Typescript",
+    color: "#FFC876",
   },
   {
     id: "3",
-    title: "Render 3D scenes",
-    text: "With 3D interactive scenes anything is possible in your landpage.",
-    date: "Feb 2024",
-    status: "progress",
-    imageUrl: roadmap4,
+    name: "Tailwind",
+    color: "#FF776F",
   },
 ];
 

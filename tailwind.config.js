@@ -65,8 +65,8 @@ export default {
         pulse: "pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
         tilt: "tilt 10s infinite linear",
         gradient: "gradient 6s linear infinite",
-        "spin-slow": "spin 4s linear infinite",
-        despin: "despin 4s linear infinite",
+        "spin-slow": "spin 6s linear infinite",
+        despin: "despin 6s linear infinite",
       },
       keyframes: {
         tilt: {
@@ -178,7 +178,7 @@ export default {
           "@apply text-[2rem] leading-normal md:text-[2.5rem]": {},
         },
         ".h4": {
-          "@apply text-[2rem] leading-normal": {},
+          "@apply text-[2.5rem] leading-normal font-semibold": {},
         },
         ".h5": {
           "@apply text-2xl leading-normal": {},

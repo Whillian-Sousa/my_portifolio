@@ -8,7 +8,7 @@ const Footer = () => {
       data-scroll-section
       className="flex flex-col p-10 pt-36 z-3 overflow-hidden"
     >
-      <div className="flex items-center h-[25rem] justify-between relative rounded-xl p-10">
+      <div className="flex items-center h-[30rem] justify-between relative rounded-xl p-10">
         <div className="flex flex-col h-full justify-between">
           <Blurry className="absolute opacity-50 z-0 scale-50 md:scale-125 left-7" />
           <div className="absolute opacity-10 inset-0 bg-footer-gradient border border-n-6 rounded-xl z-0" />
@@ -47,7 +47,7 @@ const Footer = () => {
         </div>
         <div className="flex flex-col justify-between h-full mt-10 md:mr-0 xl:mr-10">
           <Socials />
-          <div className="flex text-color-7 font-light font-lexend text-lg gap-6 z-50 mb-5 mx-auto">
+          <div className="flex text-color-7 font-light font-lexend text-lg gap-6 z-50 mb-10 mx-auto">
             <a
               href="mailto:whillscf@gmail.com.br"
               className="flex items-center gap-2 opacity-50 transition-opacity hover:opacity-80"

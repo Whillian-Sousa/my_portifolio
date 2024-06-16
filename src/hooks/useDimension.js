@@ -5,15 +5,15 @@ const useDimension = () => {
 
   const updateDimension = () => {
     const { innerWidth, innerHeight } = window;
-
-    setDimension({ width: innerWidth, height: innerHeight });
+    setDimension({
+      width: innerWidth,
+      height: innerHeight,
+    });
   };
 
   useEffect(() => {
     updateDimension();
-
     window.addEventListener("resize", updateDimension);
-
     return () => {
       window.removeEventListener("resize", updateDimension);
     };

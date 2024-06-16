@@ -4,6 +4,7 @@ import { favicon, github } from "../assets";
 import { navigation } from "../constants";
 import Button from "./Button";
 import { useEffect, useState } from "react";
+import TranslateButton from "./TranslateButton";
 
 const Header = () => {
   const pathname = useLocation();
@@ -31,8 +32,8 @@ const Header = () => {
       data-scroll-section
       className={
         fixed
-          ? "fixed top-0 left-0 w-full z-50 bg-n-8/30 backdrop-blur-xl"
-          : "fixed top-0 left-0 w-full z-50 py-3"
+          ? "fixed top-0 left-0 w-full z-50 bg-n-8/30 backdrop-blur-xl transition-all"
+          : "fixed top-0 left-0 w-full z-50 py-3 transition-all"
       }
     >
       <div className="flex flex-col md:flex-row items-center justify-between px-5 lg:px-7.5 xl:px-10 max-md:py-10 max-lg:py-4">
@@ -52,9 +53,9 @@ const Header = () => {
               width={40}
               height={40}
             />
-            <p className="flex items-center gap-1 text-3xl font-lexend font-bold text-color-7 hover:text-color-5 transition-colors">
+            <p className="flex items-center gap-1 text-3xl font-lexend font-bold text-color-7 hover:text-color-1 transition-colors">
               BCW
-              <span className="animate-pulse rounded-sm h-8 w-4 bg-color-1" />
+              <span className="animate-pulse rounded-sm h-7 w-3 bg-color-1/70" />
             </p>
           </div>
         </a>
@@ -78,37 +79,13 @@ const Header = () => {
         </nav>
 
         <div className="absolute right-10 flex font-lexend items-center gap-2 xl:gap-6">
-          <a
-            target="_blank"
-            href="https://github.com/Whillian-Sousa"
-            className="relative text-color-7 sepia-200 flex overflow-hidden hover:border-accent group"
-          >
-            <div className="group-hover:-translate-y-[120%] group-hover:opacity-0 transition-all duration-500 flex items-center gap-3">
-              <img
-                className="max-lg:scale-75"
-                src={github}
-                alt="github"
-                width={30}
-                height={30}
-              />
-              <span> This code</span>
-            </div>
-            <div className="translate-y-[120%] opacity-0 group-hover:flex group-hover:-translate-y-0 group-hover:opacity-100 transition-all absolute duration-500 flex items-center gap-3">
-              <img
-                className="max-lg:scale-75"
-                src={github}
-                alt="github"
-                width={30}
-                height={30}
-              />
-              <span>This code</span>
-            </div>
+          <a target="_blank" href="https://github.com/Whillian-Sousa">
+            <TranslateButton src={github} title="This Code" />
           </a>
           <a target="_blank" href="https://www.linkedin.com/in/whillian-sousa/">
             <Button className="flex group absolute font-bold max-lg:text-sm min-width:fitcontent rounded-full transition-transform hover:transition-all bg-linear-gradient hover:pr-9 hover:scale-105 hover:pl-5 text-n-8">
               Hire me
               <span className="text-transparent text-xl absolute -right-6 -top-1 group-hover:text-n-8 m-0">
-                {/* &#x2198; */}
                 &rarr;
               </span>
             </Button>

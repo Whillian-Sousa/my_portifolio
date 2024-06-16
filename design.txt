@@ -1,4 +1,6 @@
  BCW_  ABOUT | WORK | SKILLS | CONTACT  (Search) ( * Star on GitHub | Linkedin )
+
+ parallax smoothscroll horizontal.scroll 3d.scenes animations gsap three.fiber motion framer.motion next.js 
  
  > ssh el.psy.congro.sh_
  

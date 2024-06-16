@@ -1,7 +1,7 @@
 import { heroIcons } from "../constants";
 import { ScrollParallax } from "react-just-parallax";
 import { useRef } from "react";
-import CompanyLogos from "./CompanyLogos";
+import TechLogos from "./TechLogos";
 import Blurry from "./Blurry";
 import ImageNoise from "./ImageNoise";
 import Inner from "./Inner";
@@ -10,11 +10,7 @@ const Hero = () => {
   const parallaxRef = useRef();
   return (
     <Inner>
-      <section
-        data-scroll-section
-        className="pt-[16rem] md:pt-[7.25rem]"
-        id="hero"
-      >
+      <section className="pt-[16rem] md:pt-[7.25rem]" id="hero">
         <div className="container relative" ref={parallaxRef}>
           <div className="relative z-3 mx-auto text-center mb-[4rem] md:mb-20 lg:mb-[6rem]">
             <p className="flex justify-center items-center gap-1 font-lexend text-n-14">
@@ -24,7 +20,7 @@ const Hero = () => {
             <div className="flex flex-col items-center">
               <h1 className="h1 uppercase font-bold gradient-text text-transparent gap-1 mb-3 font-lexend pt-15">
                 Better Call Wh
-                <span className="lowercase text-[3.6rem] font-extrabold">
+                <span className="text-[clamp(1.25rem,3.8vw,3.6rem)] lowercase font-extrabold">
                   l
                 </span>
                 ll
@@ -76,7 +72,7 @@ const Hero = () => {
             </p>
           </div>
         </div>
-        <CompanyLogos />
+        <TechLogos />
       </section>
     </Inner>
   );

@@ -28,13 +28,24 @@ import moon from "./moon.svg";
 import star from "./star.svg";
 import grainy from "./grainy.svg";
 import background from "./background.png";
-import roadmap0 from "./roadmap/hero.png";
-import roadmap1 from "./roadmap/image-1.png";
-import roadmap2 from "./roadmap/image-2.png";
-import roadmap3 from "./roadmap/image-3.png";
-import roadmap4 from "./roadmap/image-4.png";
+import img0 from "./showcase/img0.jpg";
+import img1 from "./showcase/img1.jpg";
+import img2 from "./showcase/img2.jpg";
+import img3 from "./showcase/img3.jpg";
+import img4 from "./showcase/img4.jpg";
+import img5 from "./showcase/img5.jpg";
+import img6 from "./showcase/img6.jpg";
+import img7 from "./showcase/img7.jpg";
 
 export {
+  img0,
+  img1,
+  img2,
+  img3,
+  img4,
+  img5,
+  img6,
+  img7,
   hero,
   github,
   git,
@@ -59,11 +70,6 @@ export {
   gradient,
   grainy,
   background,
-  roadmap0,
-  roadmap1,
-  roadmap2,
-  roadmap3,
-  roadmap4,
   instagram,
   telegram,
   moon,

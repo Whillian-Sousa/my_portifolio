@@ -3,6 +3,7 @@ import { favicon } from "../assets";
 import * as Yup from "yup";
 import emailjs from "@emailjs/browser";
 import { useRef } from "react";
+import Button from "./Button";
 
 const LetsTalk = () => {
   const form = useRef();
@@ -51,7 +52,7 @@ const LetsTalk = () => {
   };
 
   return (
-    <div id="contact" className="relative h-[70vh]">
+    <section id="contact" className="relative h-[70vh]">
       <div className="relative container mx-auto text-center xl:text-left flex items-center justify-center h-full">
         {/* text e form */}
         <div className="flex flex-col w-full max-w-[70rem]">
@@ -127,7 +128,7 @@ const LetsTalk = () => {
                 />
                 <label
                   htmlFor="message"
-                  className={`absolute opacity-100 left-0 -top-7 input border-none bg-none text-color-5 transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-[1rem] peer-focus:-top-7 ${formik.touched.subject && formik.errors.subject ? "peer-focus:text-color-3 peer-placeholder-shown:text-color-3/50" : "peer-focus:text-color-7 peer-placeholder-shown:text-color-7/30"}`}
+                  className={`absolute opacity-100 left-0 -top-7 input border-none bg-none text-color-5 transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-[1rem] peer-focus:-top-7 ${formik.touched.message && formik.errors.message ? "peer-focus:text-color-3 peer-placeholder-shown:text-color-3/50" : "peer-focus:text-color-7 peer-placeholder-shown:text-color-7/30"}`}
                 >
                   {formik.touched.message && formik.errors.message
                     ? formik.errors.message
@@ -160,28 +161,21 @@ const LetsTalk = () => {
             </div>
 
             {/* Button */}
-            <div className="grid gap-8 items-start justify-center">
-              <div className="relative group font-lexend">
-                <div className="absolute inset-0.5 bg-gradient-to-r from-color-1 to-color-5 rounded-sm blur opacity-75 group-hover:opacity-100 group-hover:duration-200 transition duration-1000 animate-tilt" />
-                <button
-                  type="submit"
-                  className="relative px-7 py-4 bg-n-8 rounded-lg leading-none flex items-center divide-x divide-gray-600"
-                >
-                  <span className="flex items-center space-x-5">
-                    <img src={favicon} alt="moon icon" width={24} height={24} />
-                    <span className="pr-6 text-color-7">Say hello</span>
-                  </span>
-                  <span className="pl-6 text-color-5 group-hover:text-color-7 transition duration-200 space-x-3">
-                    <span>Let&apos;s talk</span>
-                    <span className="text-xl leading-none">&rarr;</span>
-                  </span>
-                </button>
-              </div>
-            </div>
+            <Button
+              className="justify-center"
+              popovertarget="my-popover"
+              img={favicon}
+              alt="Moon Icon"
+              text="Say hello"
+              subtext="Let's talk"
+            />
           </form>
+          {/* <div popover id="my-popover"> */}
+          {/*   <h1>hello</h1> */}
+          {/* </div> */}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

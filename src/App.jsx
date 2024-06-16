@@ -4,13 +4,23 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import HorizontalScrolling from "./components/HorizontalScrolling";
 import LetsTalk from "./components/LetsTalk";
-import ScrollAnimation from "./components/ScrollAnimation";
 import { Stars } from "@react-three/drei";
 import { useEffect, useState } from "react";
 import Preloader from "./components/Preloader";
 import { AnimatePresence } from "framer-motion";
+import Lenis from "lenis";
+import Showcase from "./components/Showcase";
 
 const App = () => {
+  useEffect(() => {
+    const lenis = new Lenis();
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+  }, []);
+
   const [preloader, setPreloader] = useState(true);
 
   useEffect(() => {
@@ -26,26 +36,24 @@ const App = () => {
           <Preloader />
         </AnimatePresence>
       ) : (
-        <AnimatePresence mode="wait">
-          <div className="">
-            <div className="relative">
-              <div className="absolute inset-0">
-                <Canvas>
-                  <Stars radius={50} count={30000} factor={3} fade speed={2} />
-                </Canvas>
-              </div>
-              <Header />
-              <Hero />
-              <ScrollAnimation />
+        <>
+          <div className="relative">
+            <div className="absolute inset-0">
+              <Canvas>
+                <Stars radius={50} count={30000} factor={3} fade speed={2} />
+              </Canvas>
             </div>
-            <div className="relative">
-              <div className="absolute inset-0 bg-form-gradient opacity-30" />
-              <HorizontalScrolling />
-              <LetsTalk />
-            </div>
-            <Footer />
+            <Header />
+            <Hero />
+            <Showcase />
           </div>
-        </AnimatePresence>
+          <div className="relative">
+            <div className="absolute inset-0 bg-form-gradient opacity-30" />
+            <HorizontalScrolling />
+            <LetsTalk />
+          </div>
+          <Footer />
+        </>
       )}
     </>
   );

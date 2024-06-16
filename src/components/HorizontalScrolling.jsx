@@ -7,6 +7,7 @@ import {
 } from "framer-motion";
 import { useRef } from "react";
 import { favicon } from "../assets";
+import Button from "./Button";
 
 const text = "Horizontal scrolling is the new thing";
 
@@ -29,12 +30,10 @@ const HorizontalScrolling = () => {
   const defaultAnimations = {
     hidden: {
       opacity: 0.1,
-      // scale: 0.8,
       y: 50,
     },
     visible: {
       opacity: 1,
-      // scale: 1,
       y: 0,
       transition: {
         duration: 0.5,
@@ -68,21 +67,13 @@ const HorizontalScrolling = () => {
                 </span>
               </p>
             </div>
-            <div className="grid p-10 gap-8 items-start justify-start">
-              <div className="relative group font-lexend">
-                <div className="absolute inset-0.5 bg-gradient-to-r from-color-1 to-color-5 rounded-sm blur opacity-75 group-hover:opacity-100 group-hover:duration-200 transition duration-1000 animate-tilt" />
-                <buttom className="relative px-7 py-4 bg-n-8 rounded-lg leading-none flex items-center divide-x divide-gray-600">
-                  <span className="flex items-center space-x-5">
-                    <img src={favicon} alt="moon icon" width={24} height={24} />
-                    <span className="pr-6 text-color-7">Ok then</span>
-                  </span>
-                  <span className="pl-6 text-color-5 group-hover:text-color-7 transition duration-200 space-x-3">
-                    <span>Let&apos;s scroll</span>
-                    <span className="text-xl leading-none">&rarr;</span>
-                  </span>
-                </buttom>
-              </div>
-            </div>
+            <Button
+              className="pt-10 pl-10 justify-start"
+              img={favicon}
+              alt="Moon Icon"
+              text="Say hello"
+              subtext="Let's talk"
+            />
           </div>
           <div className="relative text-color-7 flex items-center gap-4 text-7xl font-bold text-nowrap">
             <motion.p
@@ -94,6 +85,7 @@ const HorizontalScrolling = () => {
             >
               {text.split(" ").map((word) => (
                 <motion.span
+                  key={word}
                   className="inline-block mr-5"
                   variants={defaultAnimations}
                 >
@@ -112,9 +104,7 @@ const HorizontalScrolling = () => {
                   ease: "backInOut",
                 },
               }}
-              viewport={{
-                margin: "-500px",
-              }}
+              viewport={{ once: true }}
               className=" text-transparent gradient-text py-10"
             >
               Scroll to everywhere
@@ -123,7 +113,24 @@ const HorizontalScrolling = () => {
               In any direction you desire
             </span>
           </div>
-          <div className="relative w-[67vw] flex items-center flex-col justify-center gap-12">
+          <motion.div
+            initial={{
+              opacity: 0.1,
+              scale: 0.8,
+              y: 30,
+            }}
+            whileInView={{
+              opacity: 1,
+              scale: 1,
+              y: 0,
+              transition: {
+                duration: 2,
+                ease: "backInOut",
+              },
+            }}
+            viewport={{ once: true }}
+            className="relative w-[67vw] flex items-center flex-col justify-center gap-12"
+          >
             <p className="absolute rounded-lg text-color-3 font-extrabold border-[1px] border-color-3 right-16 top-24 z-1 text-3xl p-3 -skew-y-6">
               and exciting
             </p>
@@ -132,7 +139,7 @@ const HorizontalScrolling = () => {
               <span className="ml-[15rem]">beautiful</span>
               <span className="ml-[44rem]">worlds</span>
             </p>
-          </div>
+          </motion.div>
         </motion.div>
       </div>
     </section>

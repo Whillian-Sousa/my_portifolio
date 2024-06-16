@@ -1,42 +1,37 @@
-import ButtonSvg from "../assets/svg/ButtonSvg";
-
-const Button = ({ className, href, onClick, children, px, white }) => {
-  const classes = `relative inline-flex items-center justify-center h-8 lg:h-11 transition-colors ${px || "px-5 lg:px-7"} ${
-    white ? "text-n-8" : "text-n-1"
-  } ${className || ""}`;
+const Button = ({ className, img, text, subtext, alt, children, px }) => {
+  const classes = `relative inline-flex items-center justify-center h-8 lg:h-11 transition-colors ${px || "px-5 lg:px-7"} ${className || ""}`;
 
   const spanClasses = "relative z-10";
 
-  const renderButton = () => (
-    <button className={classes} onClick={onClick}>
+  const renderHeaderButton = () => (
+    <button className={classes}>
       <span className={spanClasses}>{children}</span>
-      {ButtonSvg(white)}
     </button>
   );
 
   const renderLink = () => (
-    <a href={href} className={classes}>
-      <span className={spanClasses}>{children}</span>
-      {ButtonSvg(white)}
-    </a>
+    <div className={`grid gap-8 items-start ${className || ""}`}>
+      <div className="relative group font-lexend">
+        <div className="absolute inset-0.5 bg-gradient-to-r from-color-1 to-color-5 rounded-sm blur opacity-75 group-hover:opacity-100 group-hover:duration-200 transition duration-1000 animate-tilt" />
+        <button
+          popovertarget="popovertarget"
+          type="submit"
+          className="relative px-7 py-4 bg-n-8 rounded-lg leading-none flex items-center divide-x divide-gray-600"
+        >
+          <span className="flex items-center space-x-5">
+            <img src={img} alt={alt} width={24} height={24} />
+            <span className="pr-6 text-color-7">{text}</span>
+          </span>
+          <span className="pl-6 text-color-5 group-hover:text-color-7 transition duration-200 space-x-3">
+            <span>{subtext}</span>
+            <span className="text-xl leading-none">&rarr;</span>
+          </span>
+        </button>
+      </div>
+    </div>
   );
 
-  return href ? renderLink() : renderButton();
-};
-
-export const ButtonAnimate = () => {
-  return (
-    <button className="rounded-full border border-white/50 max-w-[170px] p-3 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-accent group">
-      <div className="group-hover:-translate-y-[120%] group-hover:opacity-0 transition-all duration-200 flex gap-4">
-        <span>Let&apos;s talk</span>
-        <span> &rarr;</span>
-      </div>
-      <div className="translate-y-[120%] opacity-0 group-hover:flex group-hover:-translate-y-0 group-hover:opacity-100 transition-all absolute duration-200 flex gap-4">
-        <span>Let&apos;s talk</span>
-        <span> &rarr;</span>
-      </div>
-    </button>
-  );
+  return img ? renderLink() : renderHeaderButton();
 };
 
 export default Button;
