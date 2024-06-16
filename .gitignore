@@ -8,6 +8,7 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
+public/nasa_cgi_moon_kit/
 dist
 dist-ssr
 *.local
