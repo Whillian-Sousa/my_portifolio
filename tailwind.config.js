@@ -19,6 +19,7 @@ export default {
           5: "#858DFF",
           6: "#AC6AFF",
           7: "#FFFCE1",
+          8: "#9f53ff",
         },
         stroke: {
           1: "#26242C",
@@ -167,7 +168,7 @@ export default {
             {},
         },
         ".h1": {
-          "@apply font-semibold text-[2.5rem] leading-[3.25rem] md:text-[2.75rem] md:leading-[3.75rem] lg:text-[3.25rem] lg:leading-[4.0625rem] xl:text-[3.75rem] xl:leading-[4.5rem]":
+          "@apply font-semibold text-[2rem] sm:text-[2.5rem] leading-[2.25rem] lg:text-[2.75rem] sm:leading-[3.25rem] lg:leading-[3.75rem] xl:text-[3.75rem] xl:leading-[4.5rem]":
             {},
         },
         ".h2": {
@@ -175,10 +176,12 @@ export default {
             {},
         },
         ".h3": {
-          "@apply text-[2rem] leading-normal md:text-[2.5rem]": {},
+          "@apply text-[1.5rem] sm:text-[2rem] font-semibold xl:text-[2.5rem]":
+            {},
         },
         ".h4": {
-          "@apply text-[2.5rem] leading-normal font-semibold": {},
+          "@apply sm:text-[1.5rem] md:text-[1.8rem] xl:text-[2.2rem] leading-normal font-semibold":
+            {},
         },
         ".h5": {
           "@apply text-2xl leading-normal": {},

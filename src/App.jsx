@@ -10,6 +10,7 @@ import Preloader from "./components/Preloader";
 import { AnimatePresence } from "framer-motion";
 import Lenis from "lenis";
 import Showcase from "./components/Showcase";
+import NavBottom from "./components/NavBottom";
 
 const App = () => {
   useEffect(() => {
@@ -44,6 +45,7 @@ const App = () => {
               </Canvas>
             </div>
             <Header />
+            <NavBottom />
             <Hero />
             <Showcase />
           </div>

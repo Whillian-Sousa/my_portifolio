@@ -53,14 +53,14 @@
     @apply h-[52px];
   }
   .input {
-    @apply w-full h-[52px] rounded-lg pl-6;
+    @apply w-full h-[52px] rounded-lg pl-4 md:pl-6;
   }
   .input,
   .textarea {
     @apply opacity-20 mix-blend-plus-lighter outline-none focus:ring-1 ring-color-1 border-n-6/70 placeholder-transparent placeholder:font-light;
   }
   .textarea {
-    @apply w-full h-full p-6 rounded-lg resize-none;
+    @apply w-full h-[150px] md:h-[200px] p-6 rounded-lg resize-none;
   }
 }
 

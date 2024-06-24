@@ -4,7 +4,7 @@ import MagneticButton from "./MagneticButton";
 const Socials = () => {
   return (
     <div className="flex -my-5">
-      <ul className="h-full flex gap-6 z-50">
+      <ul className="h-full flex gap-6 z-1">
         {socials.map((item) => (
           <MagneticButton
             id={true}

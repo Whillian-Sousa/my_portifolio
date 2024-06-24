@@ -44,27 +44,27 @@ const TechList = () => {
 
   return (
     <div
-      className="pt-8 overflow-hidden before:z-2 before:bg-linear-slide-l before:h-[100%] before:w-[250px] before:content-[''] before:absolute before:overflow-hidden before:top-0
-        after:z-2 after:bg-linear-slide-r after:h-[100%] after:w-[250px] after:content-[''] after:absolute after:overflow-hidden after:top-0 after:right-0"
+      className="overflow-hidden before:z-2 before:bg-linear-slide-l before:h-[100%] before:w-[100px] md:before:w-[175px] xl:before:w-[250px] before:content-[''] before:absolute before:overflow-hidden before:top-0
+        after:z-2 after:bg-linear-slide-r after:h-[100%] after:w-[100px] md:after:w-[175px] xl:after:w-[250px] after:content-[''] after:absolute after:overflow-hidden after:top-0 after:right-0"
       ref={component}
     >
       {techList.map(({ name, color }, id) => (
         <div
-          className="tech-row mb-5 flex items-center justify-center gap-4 text-n-12"
+          className="tech-row mb-1 sm:mb-2 md:mb-3 lg:mb-4 xl:mb-5 flex items-center justify-center gap-4 text-n-12"
           key={id}
           aria-label={name || undefined}
         >
           {Array.from({ length: 15 }, (_, id) => (
             <React.Fragment key={id}>
               <span
-                className="tech-item text-6xl font- upprcase tracking-tighter font-lexend"
+                className="tech-item text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl tracking-tighter font-lexend"
                 style={{
                   color: id === 7 && color ? color : "inherit",
                 }}
               >
                 {name}
               </span>
-              <span className="text-2xl">
+              <span className="text-xs md:text-sm lg:text-xl xl:text-2xl">
                 <MdCircle />
               </span>
             </React.Fragment>

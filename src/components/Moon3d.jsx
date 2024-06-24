@@ -21,15 +21,14 @@ const Moon3d = () => {
   const smoothProgress = useSpring(progress, { damping: 30 });
 
   return (
-    <div ref={container} className="h-[490vh]">
-      <div className="sticky top-0 h-[100vh]">
-        <div className="absolute inset-0 bg-color-2 top-[19rem] left-[8rem] content-center blur-[6rem] opacity-70 rounded-full size-[22rem]" />
-        {/* <CircleLetters progress={smoothProgress} /> */}
+    <div ref={container} className="relative h-full md:h-[490vh]">
+      <div className="md:sticky top-0 h-[60vh] md:h-[100vh]">
+        <div className="absolute inset-0 m-auto bg-color-2 blur-[6rem] opacity-70 rounded-full size-[19vw]" />
         <Canvas gl={{ antialias: true }} dpr={[1, 1.5]}>
           <ambientLight intensity={3} />
           <OrbitControls enableZoom={false} enablePan={false} />
           <Suspense fallback={<Loader />}>
-            <Model progress={smoothProgress} />
+            {/* <Model progress={smoothProgress} /> */}
           </Suspense>
           <Environment preset="night" />
         </Canvas>

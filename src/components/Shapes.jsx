@@ -6,7 +6,7 @@ import { gsap } from "gsap";
 
 const Shapes = () => {
   return (
-    <div className="-mt-10 aspect-square h-[45vh]">
+    <div className="-mt-10 aspect-square h-[40vh] lg:h-[45vh]">
       <Canvas
         className="z-0"
         shadows

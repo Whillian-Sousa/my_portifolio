@@ -14,15 +14,16 @@ const Button = ({ className, img, text, subtext, alt, children, px }) => {
       <div className="relative group font-lexend">
         <div className="absolute inset-0.5 bg-gradient-to-r from-color-1 to-color-5 rounded-sm blur opacity-75 group-hover:opacity-100 group-hover:duration-200 transition duration-1000 animate-tilt" />
         <button
-          popovertarget="popovertarget"
           type="submit"
-          className="relative px-7 py-4 bg-n-8 rounded-lg leading-none flex items-center divide-x divide-gray-600"
+          className="relative whitespace-nowrap px-5 py-3 lg:px-7 lg:py-4 bg-n-8 rounded-lg leading-none flex divide-x divide-gray-600"
         >
-          <span className="flex items-center space-x-5">
+          <span className="flex items-center space-x-3 lg:space-x-5">
             <img src={img} alt={alt} width={24} height={24} />
-            <span className="pr-6 text-color-7">{text}</span>
+            <span className="text-xs lg:text-base pr-4 lg:pr-6 text-color-7">
+              {text}
+            </span>
           </span>
-          <span className="pl-6 text-color-5 group-hover:text-color-7 transition duration-200 space-x-3">
+          <span className="pl-4 lg:pl-6 text-color-5 text-xs lg:text-base group-hover:text-color-7 transition duration-200 space-x-3">
             <span>{subtext}</span>
             <span className="text-xl leading-none">&rarr;</span>
           </span>

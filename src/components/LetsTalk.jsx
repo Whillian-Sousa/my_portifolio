@@ -22,8 +22,8 @@ const LetsTalk = () => {
       email: Yup.string()
         .email("Invalid email address")
         .required("Email is required"),
-      subject: Yup.string().required("What's the subject?"),
-      message: Yup.string().required("What's you message"),
+      subject: Yup.string().required("What's the topic?"),
+      message: Yup.string().required("What's your message?"),
     }),
 
     //Submit Form
@@ -52,12 +52,12 @@ const LetsTalk = () => {
   };
 
   return (
-    <section id="contact" className="relative h-[70vh]">
-      <div className="relative container mx-auto text-center xl:text-left flex items-center justify-center h-full">
+    <section id="contact" className="relative h-[80vh]">
+      <div className="relative mx-5 sm:mx-10 text-left flex items-center justify-center h-full">
         {/* text e form */}
-        <div className="flex flex-col w-full max-w-[70rem]">
+        <div className="flex flex-col w-full max-lg:max-w-[50rem] max-w-[70rem]">
           {/* text */}
-          <h2 className="h1 font-lexend font-bold text-center mb-20 text-color-7">
+          <h2 className="h1 font-lexend font-bold text-center mb-15 lg:mb-20 text-color-7">
             Let&apos;s{" "}
             <span className="text-transparent gradient-text">Talk</span>
           </h2>
@@ -65,11 +65,11 @@ const LetsTalk = () => {
           <form
             ref={form}
             onSubmit={formik.handleSubmit}
-            className="flex-1 flex flex-col gap-15 w-full mx-auto"
+            className="flex-1 flex flex-col gap-8 sm:gap-10 lg:gap-15 w-full mx-auto"
           >
-            <div className="grid grid-cols-4 gap-6 gap-y-12 w-full">
+            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 gap-y-10 sm:gap-y-12 w-full">
               {/* Name */}
-              <div className="relative">
+              <div className="relative max-sm:col-span-2">
                 <div className="absolute rounded-lg inset-0 bg-noisy opacity-10" />
                 <input
                   id="name"
@@ -83,7 +83,7 @@ const LetsTalk = () => {
                 />
                 <label
                   htmlFor="name"
-                  className={`absolute opacity-100 left-0 -top-7 input border-none bg-none text-color-5 transition-all peer-placeholder-shown:text-base  peer-placeholder-shown:top-[1rem] peer-focus:-top-7 ${formik.touched.name && formik.errors.name ? "peer-focus:text-color-3 peer-placeholder-shown:text-color-3/50" : "peer-focus:text-color-7 peer-placeholder-shown:text-color-7/30"}`}
+                  className={`absolute opacity-100 left-0 -top-7 input border-none bg-none text-color-5 transition-all peer-placeholder-shown:text-[0.9rem] sm:peer-placeholder-shown:text-base peer-placeholder-shown:top-[1rem] peer-focus:-top-7 ${formik.touched.name && formik.errors.name ? "peer-focus:text-color-3 peer-placeholder-shown:text-color-3/50" : "peer-focus:text-color-7 peer-placeholder-shown:text-color-7/30"}`}
                 >
                   {formik.touched.name && formik.errors.name
                     ? formik.errors.name
@@ -92,7 +92,7 @@ const LetsTalk = () => {
               </div>
 
               {/* Email */}
-              <div className="relative">
+              <div className="relative max-sm:col-span-2 max-sm:row-start-2">
                 <div className="absolute rounded-lg inset-0 bg-noisy opacity-10" />
                 <input
                   id="email"
@@ -106,7 +106,7 @@ const LetsTalk = () => {
                 />
                 <label
                   htmlFor="email"
-                  className={`absolute opacity-100 left-0 -top-7 input border-none bg-none text-color-5 transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-[1rem] peer-focus:-top-7 ${formik.touched.email && formik.errors.email ? "peer-focus:text-color-3 peer-placeholder-shown:text-color-3/50" : "peer-focus:text-color-7 peer-placeholder-shown:text-color-7/30"}`}
+                  className={`absolute opacity-100 left-0 -top-7 input border-none bg-none text-color-5 transition-all peer-placeholder-shown:text-[0.9rem] sm:peer-placeholder-shown:text-base peer-placeholder-shown:top-[1rem] peer-focus:-top-7 ${formik.touched.email && formik.errors.email ? "peer-focus:text-color-3 peer-placeholder-shown:text-color-3/50" : "peer-focus:text-color-7 peer-placeholder-shown:text-color-7/30"}`}
                 >
                   {formik.touched.email && formik.errors.email
                     ? formik.errors.email
@@ -115,8 +115,8 @@ const LetsTalk = () => {
               </div>
 
               {/* Message */}
-              <div className="relative row-span-3 col-span-2">
-                <div className="absolute rounded-lg inset-0 bg-noisy opacity-10" />
+              <div className="relative row-span-3 col-span-2 max-sm:row-start-4 max-lg:row-start-3">
+                <div className="absolute rounded-lg inset-0 bottom-2 bg-noisy object-cover opacity-10" />
                 <textarea
                   id="message"
                   name="message"
@@ -128,7 +128,7 @@ const LetsTalk = () => {
                 />
                 <label
                   htmlFor="message"
-                  className={`absolute opacity-100 left-0 -top-7 input border-none bg-none text-color-5 transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-[1rem] peer-focus:-top-7 ${formik.touched.message && formik.errors.message ? "peer-focus:text-color-3 peer-placeholder-shown:text-color-3/50" : "peer-focus:text-color-7 peer-placeholder-shown:text-color-7/30"}`}
+                  className={`absolute opacity-100 left-0 -top-7 input border-none bg-none text-color-5 transition-all peer-placeholder-shown:text-[0.9rem] sm:peer-placeholder-shown:text-base peer-placeholder-shown:top-[1rem] peer-focus:-top-7 ${formik.touched.message && formik.errors.message ? "peer-focus:text-color-3 peer-placeholder-shown:text-color-3/50" : "peer-focus:text-color-7 peer-placeholder-shown:text-color-7/30"}`}
                 >
                   {formik.touched.message && formik.errors.message
                     ? formik.errors.message
@@ -151,7 +151,7 @@ const LetsTalk = () => {
                 />
                 <label
                   htmlFor="subject"
-                  className={`absolute opacity-100 left-0 -top-7 input border-none bg-none text-color-5 transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-[1rem] peer-focus:-top-7 ${formik.touched.subject && formik.errors.subject ? "peer-focus:text-color-3 peer-placeholder-shown:text-color-3/50" : "peer-focus:text-color-7 peer-placeholder-shown:text-color-7/30"}`}
+                  className={`absolute opacity-100 left-0 -top-7 input border-none bg-none text-color-5 transition-all peer-placeholder-shown:text-[0.9rem] sm:peer-placeholder-shown:text-base peer-placeholder-shown:top-[1rem] peer-focus:-top-7 ${formik.touched.subject && formik.errors.subject ? "peer-focus:text-color-3 peer-placeholder-shown:text-color-3/50" : "peer-focus:text-color-7 peer-placeholder-shown:text-color-7/30"}`}
                 >
                   {formik.touched.subject && formik.errors.subject
                     ? formik.errors.subject

@@ -2,7 +2,6 @@ import { heroIcons } from "../constants";
 import { ScrollParallax } from "react-just-parallax";
 import { useRef } from "react";
 import TechLogos from "./TechLogos";
-import Blurry from "./Blurry";
 import ImageNoise from "./ImageNoise";
 import Inner from "./Inner";
 
@@ -10,40 +9,42 @@ const Hero = () => {
   const parallaxRef = useRef();
   return (
     <Inner>
-      <section className="pt-[16rem] md:pt-[7.25rem]" id="hero">
+      <section
+        className="pt-[5.25rem] lg:pt-[6.25rem] xl:pt-[7.25rem]"
+        id="hero"
+      >
         <div className="container relative" ref={parallaxRef}>
-          <div className="relative z-3 mx-auto text-center mb-[4rem] md:mb-20 lg:mb-[6rem]">
-            <p className="flex justify-center items-center gap-1 font-lexend text-n-14">
+          <div className="relative z-3 mx-auto text-center mb-16 md:mb-20 lg:mb-32">
+            <p className="flex text-xs lg:text-base justify-center items-center gap-1 font-lexend text-n-14">
               $ ssh el.psy.congro.sh
-              <span className="animate-pulse rounded-sm h-5 w-2 bg-color-1/50" />
+              <span className="hidden md:block animate-pulse rounded-sm h-5 w-2 bg-color-1/50" />
             </p>
-            <div className="flex flex-col items-center">
-              <h1 className="h1 uppercase font-bold gradient-text text-transparent gap-1 mb-3 font-lexend pt-15">
+            <div className="flex flex-col items-center whitespace-nowrap">
+              <h1 className="h1 uppercase font-bold gradient-text text-transparent leading-none xl:leading-none gap-1 mb-3 font-lexend pt-15">
                 Better Call Wh
-                <span className="text-[clamp(1.25rem,3.8vw,3.6rem)] lowercase font-extrabold">
+                <span className="text-[1.8rem] sm:text-[2.2rem] md:text-[2.3rem] lg:text-[2.55rem] xl:text-[3.5rem] lowercase font-extrabold">
                   l
                 </span>
                 ll
-                {/* <div className="mx-auto rounded-sm h-1 w-[15rem] lg:w-[20rem] xl:w-[27rem] bg-color-5" /> */}
               </h1>
-              <p className="max-w-2xl mb-6 text-right text-xl align-left text-color-7">
+              <p className="max-w-2xl leading-none text-right text-xs md:text-sm lg:text-lg xl:text-xl align-left text-color-7">
                 The Infinite Improbability Drive
               </p>
             </div>
           </div>
 
-          <div className="relative max-w-[15rem] max-xl:mx-auto xl:left-[14rem] md:max-w-md mb-24">
-            <Blurry className="scale-50 md:scale-100 -left-5" />
-            <div className="relative z-3 p-1 rounded-full bg-conic-gradient">
+          <div className="relative max-w-[25rem] max-xl:mx-auto px-5 md:px-0 xl:left-[14rem] md:max-w-md mb-10 md:mb-15 lg:mb-24 group">
+            <div className="absolute -inset-1 md:-inset-4 bg-gradient-to-r from-color-8 via-color-1 to-color-2 rounded-full blur-2xl opacity-50 group-hover:opacity-70 group-hover:duration-200 transition duration-1000 animate-tilt" />
+            <div className="relative z-3 p1 rounded-full bg-conic-gradient">
               <div className="relative bg-n-8 rounded-full">
                 <div className="overflow-hidden">
                   <ImageNoise />
 
                   <ScrollParallax isAbsolutelyPositioned>
-                    <ul className="hidden absolute -left-[6rem] bottom-[4rem] px-0.5 py-1 bg-n-9/40 backdrop-blur border border-n-1/10 rounded-xl md:flex">
+                    <ul className="hidden absolute -left-[5rem] bottom-[4rem] px-0.5 py-1 bg-n-9/40 backdrop-blur border border-n-1/10 rounded-xl md:flex">
                       {heroIcons.map((icon, index) => (
                         <li className="p-3" key={index}>
-                          <img src={icon} width={19} height={20} alt={icon} />
+                          <img src={icon} width={18} height={18} alt={icon} />
                         </li>
                       ))}
                     </ul>
@@ -61,14 +62,22 @@ const Hero = () => {
               </div>
             </div>
           </div>
-          <div className="flex text-color-7 mx-auto font-thin blur-[0.8px] font-lexend text-center md:leading-[3rem] xl:absolute md:text-4xl md:w-[23rem] xl:left-[50rem] gap-1 xl:top-[22rem] xl:text-left">
-            <p className="p-5">
-              Build your <span className="text-color-1 font-light"> world</span>
-              , rise your
-              <span className="text-color-1 font-light"> brand</span>. Give to
-              your customers an{" "}
-              <span className="text-color-1 font-light">experience</span> that
-              social media won&apos;t offers.
+          <div className="flex text-color-7 mx-auto font-thin font-lexend text-center sm:leading-[2.5rem] lg:leading-[3rem] xl:absolute text-2xl sm:text-3xl lg:text-4xl max-w-[40rem] xl:w-[25rem] xl:left-[50rem] gap-1 xl:top-[27rem] xl:text-left">
+            <p className="sm:pb-15 md:pb-20">
+              Build{" "}
+              <span className="text-transparent gradient-text font-light">
+                your world
+              </span>
+              , elevate
+              <span className="text-transparent gradient-text font-light">
+                {" "}
+                your brand
+              </span>
+              . Offer your customer an{" "}
+              <span className="text-transparent gradient-text font-light">
+                experience
+              </span>{" "}
+              that social media cannot offers.
             </p>
           </div>
         </div>

@@ -44,7 +44,7 @@ export default function ParallaxGalery() {
   return (
     <div
       ref={component}
-      className="relative h-[45vh] flex flex-row px-[3vw] gap-[1vw] overflow-hidden "
+      className="relative h-full md:h-full flex flex-row px-[4vw] gap-[1vw] overflow-hidden md:-mt-10"
     >
       <Column space={[space[1], space[0], space[2], space[3]]} />
       <Column space={[space[6], space[7], space[4], space[5]]} />
