@@ -30,7 +30,7 @@ const Moon3d = () => {
         <Canvas gl={{ antialias: true }} dpr={[1, 1.5]}>
           <ambientLight intensity={3} />
           <OrbitControls enableZoom={false} enablePan={false} />
-          <Suspense fallback={<Loader />}>
+          <Suspense fallback={null}>
             <Model progress={smoothProgress} />
           </Suspense>
           <Environment preset="night" />
