@@ -50,7 +50,7 @@ const Header = () => {
                 x: 0,
               },
               whileHover: {
-                x: -16,
+                x: -10,
               },
             }}
             transition={{
@@ -66,7 +66,7 @@ const Header = () => {
                   x: 0,
                 },
                 whileHover: {
-                  x: 16,
+                  x: 10,
                 },
               }}
               transition={{
@@ -84,7 +84,7 @@ const Header = () => {
                   x: 0,
                 },
                 whileHover: {
-                  x: 16,
+                  x: 10,
                 },
               }}
               transition={{
@@ -105,7 +105,7 @@ const Header = () => {
                         x: 0,
                       },
                       whileHover: {
-                        x: 16,
+                        x: 10,
                       },
                     }}
                     transition={{
@@ -124,7 +124,7 @@ const Header = () => {
                     x: 0,
                   },
                   whileHover: {
-                    x: 16,
+                    x: 10,
                   },
                 }}
                 transition={{

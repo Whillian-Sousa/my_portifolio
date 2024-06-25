@@ -11,7 +11,7 @@ const MagneticButton = ({ id, url, iconUrl, title, footer }) => {
           <a
             href={url}
             target="_blank"
-            className={`flex relative items-center justify-center size-[5rem] rounded-full transition-colors hover:animate-spin-slow group ${id ? "size-[2.2rem] sm:size-[3rem] xl:size-[5rem]" : ""}`}
+            className={`flex relative items-center justify-center size-[5rem] rounded-full transition-colors hover:animate-spin-slow group ${id ? "size-[2.3rem] sm:size-[3rem] xl:size-[5rem]" : ""}`}
           >
             <div
               className={`absolute z-0 rounded-full bg-color-7 scale-0 transition-all duration-500 size-[8rem] group-hover:scale-100 ${id ? "" : "border"}`}

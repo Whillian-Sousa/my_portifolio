@@ -40,9 +40,9 @@ const Footer = () => {
             </div>
             <Socials />
           </div>
-          <div className="flex flex-col-reverse sm:flex-row sm:justify-between w-full sm:gap-10 max-sm:p-2">
+          <div className="flex flex-col-reverse sm:flex-row sm:justify-between w-full sm:gap8 max-sm:p-2">
             <div className="relative flex flex-col text-color-7 pt-5 max-sm:text-sm">
-              <p className="">
+              <p className="whitespace-nowrap">
                 &copy; 2024 WhillianSousa <br className="lg:hidden" />
                 <span className="hidden lg:inline-flex"> |</span> Freelance Web
                 Developer
