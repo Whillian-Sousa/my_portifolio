@@ -31,7 +31,7 @@ const Moon3d = () => {
           <ambientLight intensity={3} />
           <OrbitControls enableZoom={false} enablePan={false} />
           <Suspense fallback={<Loader />}>
-            {/* <Model progress={smoothProgress} /> */}
+            <Model progress={smoothProgress} />
           </Suspense>
           <Environment preset="night" />
         </Canvas>
