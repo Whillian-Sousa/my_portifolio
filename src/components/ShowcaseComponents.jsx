@@ -13,7 +13,7 @@ const ShowcaseComponents = ({
   return (
     <div className="shadow-xl rounded-xl">
       <div className="relative p-7 md:p-10 lg:p-12 xl:p-15 rounded-2xl overflow-hidden">
-        <div className="absolute inset-0 mix-blend-lighten opacity-20 bg-[url('./src/assets/grainy.svg')] bg-cover bg-center" />
+        <div className="absolute inset-0 mix-blend-lighten opacity-20 bg-texture bg-cover bg-center" />
 
         <div className="relative">
           <div className="flex items-center justify-between mb-10 md:mb-20">
