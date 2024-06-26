@@ -134,8 +134,8 @@ export default {
         DEFAULT: "0.0625rem",
       },
       backgroundImage: {
-        texture: `url('src/assets/grainy.svg')`,
-        noisy: `url('src/assets/noisy.svg')`,
+        "grainy-texture": `url('src/assets/grainy.svg')`,
+        "noisy-texture": `url('src/assets/noisy.svg')`,
         "radial-gradient": "radial-gradient(var(--tw-gradient-stops))",
         parallax: "linear-gradient",
         "linear-gradient":

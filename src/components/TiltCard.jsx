@@ -57,7 +57,7 @@ const TiltCard = ({ date, status, text, children, gradient }) => {
       }}
       className="relative border border-n-6 h-[66vh] lg:h-[70vh] xl:h-[74vh] rounded-2xl"
     >
-      <div className="absolute inset-0 opacity-10 bg-noisy bg-cover bg-center rounded-2xl" />
+      <div className="absolute inset-0 opacity-10 bg-noisy-texture bg-cover bg-center rounded-2xl" />
       <div
         style={{
           transform: "translateZ(75px)",
@@ -66,8 +66,7 @@ const TiltCard = ({ date, status, text, children, gradient }) => {
         className="absolute inset-4 sm:inset-6 place-content-center p-5 md:p-7 lg:p-7 xl:p-10 rounded-2xl group"
       >
         <div className="">
-          <div className="absolute inset-0 mix-blend-lighten opacity-20 bg-texture bg-cover bg-center rounded-2xl" />
-          {/* <div className="absolute inset-0 pointer-events-none group-hover:bg-[radial-gradient(at_var(--x)_var(--y),rgba(255,255,255,0.2)_10%,transparent_80%)] rounded-2xl" /> */}
+          <div className="absolute inset-0 mix-blend-lighten opacity-20 bg-grainy-texture bg-cover bg-center rounded-2xl" />
           <div
             style={{
               transform: "translateZ(75px)",
