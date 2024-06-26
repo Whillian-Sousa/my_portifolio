@@ -2,7 +2,7 @@ import { hero } from "../assets";
 
 const ImageNoise = () => {
   return (
-    <div className="bg-noisy bg-cover rounded-full">
+    <div className="bg-noisy-texture bg-cover rounded-full">
       <img
         src={hero}
         className="aspect-auto mix-blend-lighten rounded-full"

@@ -13,7 +13,7 @@ const Footer = () => {
           {/* Absolute */}
           <Blurry className="absolute opacity-50 z-0 scale-90 sm:scale-100 md:scale-125 -right-32 -bottom-20 sm:-bottom-32 sm:-left-7" />
           <div className="absolute opacity-10 inset-0 bg-footer-gradient border border-n-6 rounded-xl z-0" />
-          <div className="absolute opacity-90 inset-0 bg-noisy rounded-2xl mix-blend-overlay" />
+          <div className="absolute opacity-90 inset-0 bg-noisy-texture rounded-2xl mix-blend-overlay" />
           <div className="absolute z-3 -top-10 left-10">
             <img
               className="sepia"

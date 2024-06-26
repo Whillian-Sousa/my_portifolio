@@ -70,7 +70,7 @@ const LetsTalk = () => {
             <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 gap-y-10 sm:gap-y-12 w-full">
               {/* Name */}
               <div className="relative max-sm:col-span-2">
-                <div className="absolute rounded-lg inset-0 bg-noisy opacity-10" />
+                <div className="absolute rounded-lg inset-0 bg-noisy-texture opacity-10" />
                 <input
                   id="name"
                   type="text"
@@ -93,7 +93,7 @@ const LetsTalk = () => {
 
               {/* Email */}
               <div className="relative max-sm:col-span-2 max-sm:row-start-2">
-                <div className="absolute rounded-lg inset-0 bg-noisy opacity-10" />
+                <div className="absolute rounded-lg inset-0 bg-noisy-texture opacity-10" />
                 <input
                   id="email"
                   type="email"
@@ -116,7 +116,7 @@ const LetsTalk = () => {
 
               {/* Message */}
               <div className="relative row-span-3 col-span-2 max-sm:row-start-4 max-lg:row-start-3">
-                <div className="absolute rounded-lg inset-0 bottom-2 bg-noisy object-cover opacity-10" />
+                <div className="absolute rounded-lg inset-0 bottom-2 bg-noisy-texture object-cover opacity-10" />
                 <textarea
                   id="message"
                   name="message"
@@ -138,7 +138,7 @@ const LetsTalk = () => {
 
               {/* Subject */}
               <div className="relative col-span-2">
-                <div className="absolute rounded-lg inset-0 bg-noisy opacity-10" />
+                <div className="absolute rounded-lg inset-0 bg-noisy-texture opacity-10" />
                 <input
                   id="subject"
                   type="text"
