@@ -35,7 +35,7 @@ const Hero = () => {
 
           <div className="relative max-w-[25rem] max-xl:mx-auto px-5 md:px-0 xl:left-[14rem] md:max-w-md mb-10 md:mb-15 lg:mb-24 group">
             <div className="absolute -inset-1 md:-inset-4 bg-gradient-to-r from-color-8 via-color-1 to-color-2 rounded-full blur-2xl opacity-50 group-hover:opacity-70 group-hover:duration-200 transition duration-1000 animate-tilt" />
-            <div className="relative z-3 p1 rounded-full bg-conic-gradient">
+            <div className="relative z-3 p-1 rounded-full bg-conic-gradient">
               <div className="relative bg-n-8 rounded-full">
                 <div className="overflow-hidden">
                   <ImageNoise />
