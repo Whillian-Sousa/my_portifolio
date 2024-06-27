@@ -5,29 +5,27 @@ const MagneticButton = ({ id, url, iconUrl, title, footer }) => {
   return (
     <div className="">
       <GsapMagnetic key={id}>
-        <div
-          className={`relative flex w-fit ${id ? "py-5" : "sm:scale-105 md:scale-[1.15] lg:scale-125"}`}
-        >
+        <div className={`relative flex w-fit ${id ? "py-5" : ""}`}>
           <a
             href={url}
             target="_blank"
-            className={`flex relative items-center justify-center size-[5rem] rounded-full transition-colors hover:animate-spin-slow group ${id ? "size-[2.3rem] sm:size-[3rem] xl:size-[5rem]" : ""}`}
+            className={`flex relative items-center justify-center rounded-full transition-colors hover:animate-spin-slow group ${id ? "size-[2.3rem] sm:size-[3rem] xl:size-[5rem]" : "size-[5rem] scale-[1] sm:scale-105 md:scale-[1.15] lg:scale-125"}`}
           >
             <div
-              className={`absolute z-0 rounded-full bg-color-7 scale-0 transition-all duration-500 size-[8rem] group-hover:scale-100 ${id ? "" : "border"}`}
+              className={`absolute z-0 rounded-full bg-color-7 scale-0 transition-all duration-500 size-[8rem] group-hover:scale-100 ${id ? "opacity-20" : ""}`}
             />
             <div
               className={`absolute z-0 rounded-full opacity-50 size-[8rem] ${id ? "" : "border"}`}
             />
             <img
-              className={`absolute group-hover:animate-despin mix-blend-difference ${id ? "max-sm:scale-90" : ""}`}
+              className={`absolute group-hover:animate-despin  ${id ? "max-sm:scale-90" : "mix-blend-difference"}`}
               src={iconUrl}
               width={30}
               height={30}
               alt={title}
             />
             <svg
-              className={`absolute z-1 scale-[0.275] group-hover:opacity-100 mix-blend-difference transition-all duration-700 group-hover: pointer-events-none ${id ? "opacity-0" : "opacity50 scale-[0.275]"}`}
+              className={`absolute z-1 scale-[0.275] group-hover:opacity-100 transition-all duration-700 group-hover: pointer-events-none ${id ? "opacity-0" : "mix-blend-difference"}`}
               width="640"
               height="480"
             >

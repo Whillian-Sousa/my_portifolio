@@ -44,7 +44,11 @@ const HorizontalScrolling = () => {
   const isInView = useInView(ref, { amount: 0.5, once: true });
 
   return (
-    <section id="skills" ref={targetRef} className="relative w-full h-[700vh]">
+    <section
+      id="skills"
+      ref={targetRef}
+      className="relative w-full h-[400vh] md:h-[700vh]"
+    >
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
         <motion.div
           style={{
@@ -89,7 +93,7 @@ const HorizontalScrolling = () => {
               {text.split(" ").map((word) => (
                 <motion.span
                   key={word}
-                  className="inline-block mr-2 md:mr-5"
+                  className="inline-block mr-2 md:mr-3 lg:mr-4 xl:mr-5"
                   variants={defaultAnimations}
                 >
                   {word}
