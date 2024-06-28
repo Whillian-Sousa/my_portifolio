@@ -5,11 +5,13 @@ const MagneticButton = ({ id, url, iconUrl, title, footer }) => {
   return (
     <div className="">
       <GsapMagnetic key={id}>
-        <div className={`relative flex w-fit ${id ? "py-5" : ""}`}>
+        <div
+          className={`relative flex w-fit ${id ? "py-5" : "scale-[1] sm:scale-105 md:scale-[1.15] lg:scale-125"}`}
+        >
           <a
             href={url}
             target="_blank"
-            className={`flex relative items-center justify-center rounded-full transition-colors hover:animate-spin-slow group ${id ? "size-[2.3rem] sm:size-[3rem] xl:size-[5rem]" : "size-[5rem] scale-[1] sm:scale-105 md:scale-[1.15] lg:scale-125"}`}
+            className={`flex relative items-center justify-center rounded-full transition-colors hover:animate-spin-slow group ${id ? "size-[2.3rem] sm:size-[3rem] xl:size-[5rem]" : "size-[5rem] "}`}
           >
             <div
               className={`absolute z-0 rounded-full bg-color-7 scale-0 transition-all duration-500 size-[8rem] group-hover:scale-100 ${id ? "opacity-20" : ""}`}
