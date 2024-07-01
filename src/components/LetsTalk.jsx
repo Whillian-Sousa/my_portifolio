@@ -163,16 +163,16 @@ const LetsTalk = () => {
             {/* Button */}
             <Button
               className="justify-center"
-              popovertarget="my-popover"
+              popoverTarget="nav"
               img={favicon}
               alt="Moon Icon"
               text="Say hello"
               subtext="Let's talk"
             />
+            <div id="nav" popover="">
+              <h1>hello</h1>
+            </div>
           </form>
-          {/* <div popover id="my-popover"> */}
-          {/*   <h1>hello</h1> */}
-          {/* </div> */}
         </div>
       </div>
     </section>

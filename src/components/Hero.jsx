@@ -15,7 +15,7 @@ const Hero = () => {
       >
         <div className="container relative" ref={parallaxRef}>
           <div className="relative z-3 mx-auto text-center mb-16 md:mb-20 lg:mb-32">
-            <p className="flex text-xs lg:text-base justify-center items-center gap-1 font-lexend text-n-14">
+            <p className="flex text-xs lg:text-base justify-center items-center gap-1 font-lexend font-light text-n-14">
               $ ssh el.psy.congro.sh
               <span className="hidden md:block animate-pulse rounded-sm h-5 w-2 bg-color-1/50" />
             </p>

@@ -43,7 +43,7 @@ const Showcase = () => {
               date="May 2024"
               status="In progress"
               gradient="Animations"
-              text="Your brand exposed from all angles. 3D scenes offer new possibilities to showcase every detail of your product."
+              text="Working with powerful libraries like Gsap and Framer Motion powers amazing animations and interactions."
             >
               <Typewriter />
             </TiltCard>

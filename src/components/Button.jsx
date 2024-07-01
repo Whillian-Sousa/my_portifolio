@@ -1,4 +1,13 @@
-const Button = ({ className, img, text, subtext, alt, children, px }) => {
+const Button = ({
+  className,
+  img,
+  text,
+  popoverTarget,
+  subtext,
+  alt,
+  children,
+  px,
+}) => {
   const classes = `relative inline-flex items-center justify-center h-8 lg:h-11 transition-colors ${px || "px-5 lg:px-7"} ${className || ""}`;
 
   const spanClasses = "relative z-10";
@@ -14,6 +23,7 @@ const Button = ({ className, img, text, subtext, alt, children, px }) => {
       <div className="relative group font-lexend">
         <div className="absolute inset-0.5 bg-gradient-to-r from-color-1 to-color-5 rounded-sm blur opacity-75 group-hover:opacity-100 group-hover:duration-200 transition duration-1000 animate-tilt" />
         <button
+          popoverTarget={popoverTarget}
           type="submit"
           className="relative whitespace-nowrap px-5 py-3 lg:px-7 lg:py-4 bg-n-8 rounded-lg leading-none flex divide-x divide-gray-600"
         >

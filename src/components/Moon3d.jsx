@@ -25,7 +25,7 @@ const Moon3d = () => {
       ref={container}
       className="relative h-full md:h-[435vh] lg:h-[484vh] xl:h-[510vh] 2xl:h-[500vh]"
     >
-      <div className="sticky top-0 h-[80vw] sm:h-[80vh] md:h-[100vh]">
+      <div className="sticky top-0 h-[110vw] sm:h-[80vh] md:h-[100vh]">
         <div className="absolute inset-0 m-auto bg-color-2 blur-[4rem] sm:blur-[5rem] xl:blur-[6rem] opacity-70 rounded-full size-[55vw] md:size-[26vw] lg:size-[24vw] 2xl:size-[19vw]" />
         <Canvas gl={{ antialias: true }} dpr={[1, 1.5]}>
           <ambientLight intensity={3} />
@@ -35,6 +35,24 @@ const Moon3d = () => {
           </Suspense>
           <Environment preset="night" />
         </Canvas>
+        <div className="absolute left-5 sm:left-20 md:left-10 lg:left-20 xl:left-20 2xl:left-28 bottom-2 sm:bottom-10 md:bottom-48 lg:bottom-32 xl:bottom-32 text-[10px] lg:text-xs leading-tight text-n-13/50 font-light font-lexend sm:mr-10">
+          This work is based on "Moon" <br />{" "}
+          <a
+            href="https://sketchfab.com/3d-models/moon-1425bed819624f0f92d1a05a4509289f"
+            target="_blank"
+          >
+            (https://sketchfab.com/3d-models/moon-1425bed819624f0f92d1a05a4509289f){" "}
+          </a>
+          <br />
+          by MaggaModels{" "}
+          <a href="https://sketchfab.com/MaggaModels" target="_blank">
+            (https://sketchfab.com/MaggaModels) <br /> licensed
+          </a>
+          under CC-BY-4.0{" "}
+          <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">
+            (http://creativecommons.org/licenses/by/4.0/)
+          </a>
+        </div>
       </div>
     </div>
   );
