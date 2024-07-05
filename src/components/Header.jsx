@@ -5,10 +5,13 @@ import Button from "./Button";
 import { useEffect, useState } from "react";
 import TranslateButton from "./TranslateButton";
 import { motion } from "framer-motion";
+import { Trans, useTranslation } from "react-i18next";
 
 const bcw = "BCW";
 
 const Header = () => {
+  const { t } = useTranslation();
+
   const pathname = useLocation();
 
   const [fixed, setFixed] = useState(false);
@@ -135,7 +138,6 @@ const Header = () => {
             </p>
           </motion.div>
         </motion.a>
-
         <nav className="hidden md:block top-[5rem] left-0 right-0 mx-auto lg:pr-10 bg-transparent">
           <div className="z-2 flex items-center justify-center m-auto">
             {navigation.map((item) => (
@@ -148,19 +150,20 @@ const Header = () => {
                     : "lg:text-n-1/50"
                 } `}
               >
-                {item.title}
+                {t(`nav.${item.id}.name`)}
               </a>
             ))}
           </div>
         </nav>
 
         <div className="flex items-center lg:absolute right-5 xl:right-10 font-lexend gap-4 lg:gap-6">
+          {/* <LanguageSelector /> */}
           <a target="_blank" href="https://github.com/Whillian-Sousa">
             <TranslateButton src={github} title="Github" />
           </a>
           <a target="_blank" href="https://www.linkedin.com/in/whillian-sousa/">
             <Button className="flex group absolute font-bold max-lg:text-sm min-width:fitcontent rounded-full transition-transform hover:transition-all bg-linear-gradient hover:pr-9 hover:scale-105 hover:pl-5 text-n-8">
-              Hire me
+              {t("nav.4.button")}
               <span className="text-transparent text-xl absolute -right-6 -top-1 group-hover:text-n-8 m-0">
                 &rarr;
               </span>

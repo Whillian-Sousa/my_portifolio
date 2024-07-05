@@ -4,15 +4,21 @@ import { useRef } from "react";
 import TechLogos from "./TechLogos";
 import ImageNoise from "./ImageNoise";
 import Inner from "./Inner";
+import { Trans, useTranslation } from "react-i18next";
+import LanguageSelector from "./LanguageSelector";
 
 const Hero = () => {
   const parallaxRef = useRef();
+
+  const { t } = useTranslation();
+
   return (
     <Inner>
       <section
         className="pt-[5.25rem] lg:pt-[6.25rem] xl:pt-[7.25rem]"
         id="hero"
       >
+        <LanguageSelector />
         <div className="container relative" ref={parallaxRef}>
           <div className="relative z-3 mx-auto text-center mb-16 md:mb-20 lg:mb-32">
             <p className="flex text-xs lg:text-base justify-center items-center gap-1 font-lexend font-light text-n-14">
@@ -28,7 +34,7 @@ const Hero = () => {
                 ll
               </h1>
               <p className="max-w-2xl leading-none text-right text-xs md:text-sm lg:text-lg xl:text-xl align-left text-color-7">
-                The Infinite Improbability Drive
+                {t("subtitle")}
               </p>
             </div>
           </div>
@@ -64,20 +70,14 @@ const Hero = () => {
           </div>
           <div className="flex text-color-7 mx-auto font-thin font-lexend text-center sm:leading-[2.5rem] lg:leading-[3rem] xl:absolute text-2xl sm:text-3xl lg:text-4xl max-w-[40rem] xl:w-[25rem] xl:left-[50rem] gap-1 xl:top-[27rem] xl:text-left">
             <p className="sm:pb-15 md:pb-20">
-              Build{" "}
-              <span className="text-transparent gradient-text font-light">
-                your world
-              </span>
-              , elevate
-              <span className="text-transparent gradient-text font-light">
-                {" "}
-                your brand
-              </span>
-              . Offer your customer an{" "}
-              <span className="text-transparent gradient-text font-light">
-                experience
-              </span>{" "}
-              that social media cannot offers.
+              <Trans
+                i18nKey={t("heroText")}
+                components={{
+                  1: (
+                    <span className="font-light text-transparent gradient-text" />
+                  ),
+                }}
+              />
             </p>
           </div>
         </div>

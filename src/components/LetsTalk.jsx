@@ -4,9 +4,12 @@ import * as Yup from "yup";
 import emailjs from "@emailjs/browser";
 import { useRef } from "react";
 import Button from "./Button";
+import { Trans, useTranslation } from "react-i18next";
 
 const LetsTalk = () => {
   const form = useRef();
+  const { t } = useTranslation();
+
   //Formik
   const formik = useFormik({
     initialValues: {
@@ -18,12 +21,12 @@ const LetsTalk = () => {
 
     //Validate Form
     validationSchema: Yup.object({
-      name: Yup.string().required("Name is required"),
+      name: Yup.string().required(t(`contact_yup.0`)),
       email: Yup.string()
-        .email("Invalid email address")
-        .required("Email is required"),
-      subject: Yup.string().required("What's the topic?"),
-      message: Yup.string().required("What's your message?"),
+        .email(t(`contact_yup.1`))
+        .required(t(`contact_yup.2`)),
+      subject: Yup.string().required(t(`contact_yup.3`)),
+      message: Yup.string().required(t(`contact_yup.4`)),
     }),
 
     //Submit Form
@@ -58,8 +61,12 @@ const LetsTalk = () => {
         <div className="flex flex-col w-full max-lg:max-w-[50rem] max-w-[70rem]">
           {/* text */}
           <h2 className="h1 font-lexend font-bold text-center mb-15 lg:mb-20 text-color-7">
-            Let&apos;s{" "}
-            <span className="text-transparent gradient-text">Talk</span>
+            <Trans
+              i18nKey={t("contact")}
+              components={{
+                1: <span className="text-transparent gradient-text" />,
+              }}
+            />
           </h2>
           {/* form */}
           <form
@@ -87,7 +94,7 @@ const LetsTalk = () => {
                 >
                   {formik.touched.name && formik.errors.name
                     ? formik.errors.name
-                    : "Name"}
+                    : t(`contact_form.0`)}
                 </label>
               </div>
 
@@ -132,7 +139,7 @@ const LetsTalk = () => {
                 >
                   {formik.touched.message && formik.errors.message
                     ? formik.errors.message
-                    : "Message"}
+                    : t(`contact_form.2`)}
                 </label>
               </div>
 
@@ -155,7 +162,7 @@ const LetsTalk = () => {
                 >
                   {formik.touched.subject && formik.errors.subject
                     ? formik.errors.subject
-                    : "Subject"}
+                    : t(`contact_form.1`)}
                 </label>
               </div>
             </div>
@@ -166,8 +173,8 @@ const LetsTalk = () => {
               popoverTarget="nav"
               img={favicon}
               alt="Moon Icon"
-              text="Say hello"
-              subtext="Let's talk"
+              text={t(`contact_btn.0`)}
+              subtext={t(`contact_btn.1`)}
             />
             <div id="nav" popover="">
               <h1>hello</h1>

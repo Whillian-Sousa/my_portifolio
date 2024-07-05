@@ -1,0 +1,49 @@
+{
+  "nav": [
+    { "name": "Whill who?" },
+    { "name": "Showcase" },
+    { "name": "Fancy stuff" },
+    { "name": "Let’s talk!" },
+    { "button": "Hire me" }
+  ],
+  "subtitle": "The Infinite Improbability Drive",
+  "heroText": "Build <1>your world</1>, elevate <1>your brand.</1> Offer your customer an <1>experience</1> that social media cannot offers.",
+  "tolls": "Whillian's <1>tolls</1>",
+  "vitrine_h1": "New universes, <br /> <1>new technologies</1>",
+  "vitrine_card_data": [
+    { "1": "May 2024" },
+    { "1": "Feb 2024" },
+    { "1": "Jun 2024" }
+  ],
+  "vitrine_card_status": [{ "1": "Done" }, { "1": "In progress" }],
+  "vitrine_card_title": [
+    { "1": "<1>3D</1> scenes" },
+    { "1": "Animations" },
+    { "1": "<1>Buttons</1> & Hovers" },
+    { "1": "<1>Scroll</1> everywhere" },
+    { "text_animations": "Make your page <1 /> look" }
+  ],
+  "vitrine_typing": ["more fancy", "more modern", "more beautiful"],
+  "vitrine_card_text": [
+    "Your brand exposed from all angles. 3D scenes offer new possibilities to showcase every detail of your product.",
+    "Working with powerful libraries like Gsap and Framer Motion powers amazing animations and interactions.",
+    "How about more clicks? Interactivity is essential to make buttons more attractive to visitors. No more boring buttons on your page.",
+    "In any direction you wish. Because only developers like shortcuts. Horizontal scrolling is the new thing."
+  ],
+  "fancy_text": "How about you give to <2 /> <1>your product</1> the visibility the <2 /> it needs to show up better to <2 /> <1>your customers?</1>",
+  "fancy_phrases": [
+    "Horizontal scrolling is the new trend",
+    "Scroll everywhere",
+    "In any direction you wish"
+  ],
+  "contact": "Let's <1>talk</1>",
+  "contact_form": ["Name", "Subject", "Message"],
+  "contact_yup": [
+    "Name is required",
+    "Invalid email address",
+    "Email is required",
+    "What's the subject?",
+    "What's your message?"
+  ],
+  "contact_btn": ["Say hello", "Let's talk"]
+}

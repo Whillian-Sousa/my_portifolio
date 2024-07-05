@@ -8,11 +8,13 @@ import {
 import { useRef } from "react";
 import { favicon } from "../assets";
 import Button from "./Button";
+import { Trans, useTranslation } from "react-i18next";
 
-const text = "Horizontal scrolling is the new thing";
+// const text =
 
 const HorizontalScrolling = () => {
   const targetRef = useRef(null);
+  const { t } = useTranslation();
 
   const { scrollYProgress } = useScroll({
     target: targetRef,
@@ -64,14 +66,13 @@ const HorizontalScrolling = () => {
           <div className="relative flex flex-col h-full whitespace-nowrap -ml-15 md:-ml-0 gap-3 md:gap-5">
             <div className="flex flex-col w-[100vw] sm:w-[70vw]">
               <p className="text-[5.6vw] sm:text-[2rem] md:text-[2.2rem] lg:text-[3rem] xl:text-[3.7rem] 2xl:text-[4rem] font-lexend leading-[7vw] sm:leading-[2.3rem] md:leading-[2.8rem] lg:leading-[3.8rem] xl:leading-[4.5rem] font-semibold text-color-7">
-                How about you give to <br />
-                <span className="text-transparent gradient-text">
-                  your product
-                </span>{" "}
-                the visibility the <br /> it needs to show up better to <br />
-                <span className="text-transparent gradient-text">
-                  your customers?
-                </span>
+                <Trans
+                  i18nKey={t("fancy_text")}
+                  components={{
+                    1: <span className="text-transparent gradient-text" />,
+                    2: <br />,
+                  }}
+                />
               </p>
             </div>
             <Button
@@ -90,15 +91,17 @@ const HorizontalScrolling = () => {
               transition={{ staggerChildren: 0.3 }}
               className="flex h-full items-center"
             >
-              {text.split(" ").map((word) => (
-                <motion.span
-                  key={word}
-                  className="inline-block mr-2 md:mr-3 lg:mr-4 xl:mr-5"
-                  variants={defaultAnimations}
-                >
-                  {word}
-                </motion.span>
-              ))}
+              {t("fancy_phrases.0")
+                .split(" ")
+                .map((word) => (
+                  <motion.span
+                    key={word}
+                    className="inline-block mr-2 md:mr-3 lg:mr-4 xl:mr-5"
+                    variants={defaultAnimations}
+                  >
+                    {word}
+                  </motion.span>
+                ))}
             </motion.p>
             <motion.span
               initial={{
@@ -114,10 +117,10 @@ const HorizontalScrolling = () => {
               viewport={{ once: true }}
               className="text-transparent gradient-text py-10"
             >
-              Scroll everywhere
+              {t("fancy_phrases.1")}
             </motion.span>
             <span className="border bg-color-5/50 rounded-xl md:rounded-3xl px-4 md:px-8 mx-2 md:mx-10 py-2 md:py-6">
-              In any direction you wish
+              {t("fancy_phrases.2")}
             </span>
           </div>
           <motion.div

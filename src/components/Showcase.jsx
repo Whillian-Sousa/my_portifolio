@@ -8,8 +8,11 @@ import ShowcaseComponents from "./ShowcaseComponents";
 import TiltCard from "./TiltCard";
 import TranslateButton from "./TranslateButton";
 import Typewriter from "./Typewriter";
+import { Trans, useTranslation } from "react-i18next";
 
 const Showcase = () => {
+  const { t } = useTranslation();
+
   return (
     <section id="work" className="">
       <div className="xl:max-w-[90.5rem] mx-auto grid grid-cols-1 md:grid-cols-[50%] md:grid-flow-col px-5 md:px-5 lg:px-15 2xl:gap-20">
@@ -21,40 +24,54 @@ const Showcase = () => {
         {/* Boxes */}
         <div className="">
           <h1 className="relative h1 font-lexend font-bold text-center pt-10 md:pt-40 text-color-7 ">
-            New universes, <br />
-            <span className="text-transparent gradient-text">
-              new technologies
-            </span>
+            <Trans
+              i18nKey={t("vitrine_h1")}
+              components={{
+                1: <span className="text-transparent gradient-text" />,
+              }}
+            />
           </h1>
           <div className="flex flex-col gap-[5vh] md:gap-[20vh] xl:gap-[30vh] max-md:max-w-[25rem] max-xl:max-w-[35rem] xl:w-[35rem] mx-auto md:px-5 py-20 lg:py-[15vh]">
             {/* 3d Scene */}
             <ShowcaseComponents
-              date="May 2024"
-              status="Done"
-              gradient="3d "
-              title="Scenes"
-              text="Your brand exposed from all angles. 3D scenes offer new possibilities to showcase every detail of your product."
+              date={t(`vitrine_card_data.0.1`)}
+              status={t(`vitrine_card_status.0.1`)}
+              title={
+                <Trans
+                  i18nKey={t("vitrine_card_title.0.1")}
+                  components={{
+                    1: <span className="text-transparent gradient-text" />,
+                  }}
+                />
+              }
+              text={t(`vitrine_card_text.0`)}
             >
               <Shapes />
             </ShowcaseComponents>
 
             {/* Animations */}
             <TiltCard
-              date="May 2024"
-              status="In progress"
-              gradient="Animations"
-              text="Working with powerful libraries like Gsap and Framer Motion powers amazing animations and interactions."
+              date={t(`vitrine_card_data.0.1`)}
+              status={t(`vitrine_card_status.1.1`)}
+              title={t(`vitrine_card_title.1.1`)}
+              text={t(`vitrine_card_text.1`)}
             >
               <Typewriter />
             </TiltCard>
 
             {/* Buttons | Hovers */}
             <ShowcaseComponents
-              date="Feb 2024"
-              status="Done"
-              gradient="Buttons"
-              title=" & Hovers"
-              text="How about more clicks? Interactivity is essential to make buttons more attractive to visitors. No more boring buttons on your page."
+              date={t(`vitrine_card_data.1.1`)}
+              status={t(`vitrine_card_status.0.1`)}
+              title={
+                <Trans
+                  i18nKey={t("vitrine_card_title.2.1")}
+                  components={{
+                    1: <span className="text-transparent gradient-text" />,
+                  }}
+                />
+              }
+              text={t(`vitrine_card_text.2`)}
             >
               <MagneticButton url="#" iconUrl={favicon} title="Hover me -">
                 Hover Me!
@@ -76,11 +93,17 @@ const Showcase = () => {
 
             {/* Scroll to everywhere */}
             <ShowcaseComponents
-              date="Jun 2024"
-              status="In progress"
-              gradient="Scroll"
-              title=" everywhere"
-              text="In any direction you wish. Because only developers like shortcuts. Horizontal scrolling is the new thing."
+              date={t(`vitrine_card_data.2.1`)}
+              status={t(`vitrine_card_status.1.1`)}
+              title={
+                <Trans
+                  i18nKey={t("vitrine_card_title.3.1")}
+                  components={{
+                    1: <span className="text-transparent gradient-text" />,
+                  }}
+                />
+              }
+              text={t(`vitrine_card_text.3`)}
             >
               <ParallaxGalery />
             </ShowcaseComponents>

@@ -3,7 +3,7 @@ import Tagline from "./Tagline";
 import { moon, star } from "../assets";
 import { useMotionValue, useSpring, useTransform, motion } from "framer-motion";
 
-const TiltCard = ({ date, status, text, children, gradient }) => {
+const TiltCard = ({ date, status, title, text, children }) => {
   const x = useMotionValue(0);
   const y = useMotionValue(0);
 
@@ -99,7 +99,7 @@ const TiltCard = ({ date, status, text, children, gradient }) => {
             }}
             className="h3 my-3 lg:my-5 font-lexend leading-tight"
           >
-            <span className="text-transparent gradient-text">{gradient}</span>
+            <span className="text-transparent gradient-text">{title}</span>
           </h4>
           <p
             style={{

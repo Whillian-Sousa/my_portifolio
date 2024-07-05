@@ -10,7 +10,6 @@ import {
   img6,
   img7,
   instagram,
-  javascript,
   jsColor,
   linkedin,
   node,

@@ -1,13 +1,20 @@
 import { logos } from "../constants";
 import TechList from "./TechList";
+import { Trans, useTranslation } from "react-i18next";
 
 const TechLogos = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="relative pt-15 pb-15">
       <div className="xl:container">
         <h1 className="h4 font-lexend text-center text-color-7">
-          Whillian's{" "}
-          <span className="text-transparent gradient-text">tolls</span>
+          <Trans
+            i18nKey={t("tolls")}
+            components={{
+              1: <span className="text-transparent gradient-text" />,
+            }}
+          />
         </h1>
         <div
           className="py-3 md:py-8 lg:py-10 xl:py-15 relative before:z-2 before:bg-linear-slide-l before:h-[100%] before:w-[100px] md:before:w-[175px] xl:before:w-[250px] before:content-[''] before:absolute before:overflow-hidden before:top-0

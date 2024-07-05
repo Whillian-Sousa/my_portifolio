@@ -34,7 +34,7 @@ const ShowcaseComponents = ({
             {children}
           </div>
 
-          <h4 className="h3 my-3 lg:my-5 font-lexend leading-tight whitespace-nowrap">
+          <h4 className="h3 my-3 lg:my-5 font-lexend leading-none whitespace-nowrap">
             <span className="text-transparent gradient-text">{gradient}</span>
             {title}
           </h4>

@@ -1,0 +1,49 @@
+{
+  "nav": [
+    { "name": "Whill quem?" },
+    { "name": "Vitrine" },
+    { "name": "Coisas chiques" },
+    { "name": "Conversemos!" },
+    { "button": "Contrate!" }
+  ],
+  "subtitle": "Gerador de Improbabilidade Infinita",
+  "heroText": "Construa <1>seu mundo</1>, eleve <1>sua marca</1>. Ofereça ao seu cliente uma <1>experiência</1> que as redes sociais não podem oferecer.",
+  "tolls": "<1>Ferramentas</1> do Whillian",
+  "vitrine_h1": "Novos universos, <br /> <1>novas tecnologias</1>",
+  "vitrine_card_data": [
+    { "1": "Mai 2024" },
+    { "1": "Fev 2024" },
+    { "1": "Jun 2024" }
+  ],
+  "vitrine_card_status": [{ "1": "Feito" }, { "1": "Progredindo" }],
+  "vitrine_card_title": [
+    { "1": "Cenas <1>3D</1>" },
+    { "1": "Animações" },
+    { "1": "<1>Botões</1> & Hovers" },
+    { "1": "<1>Role</1> por todo lado" },
+    { "text_animations": "Faça sua página <1 /> parecer" }
+  ],
+  "vitrine_typing": ["mais chique", "mais moderna", "mais bonita"],
+  "vitrine_card_text": [
+    "Sua marca exposta de todos os ângulos. Cenas 3D oferecem novas possibilidades para mostrar cada detalhe do seu produto.",
+    "Trabalhar com bibliotecas poderosas como Gsap e Framer Motion proporciona animações e interações incríveis.",
+    "Que tal mais cliques? A interatividade é essencial para tornar os botões mais atrativos para os visitantes. Chega de botões chatos em sua página.",
+    "Em qualquer direção que você desejar. Porque só os desenvolvedores gostam de atalhos. Rolagem horizontal é a nova tendência."
+  ],
+  "fancy_text": "Que tal você dar para <2 /> <1>seu produto</1> a visibilidade que <2 /> ele precisa para aparecer <2 /> melhor para <1>seus clientes?</1>",
+  "fancy_phrases": [
+    "O scroll horizontal é a nova tendência",
+    "Role pra todos os alugares",
+    "Para onde você quiser"
+  ],
+  "contact": "Vamos <1>conversar</1>",
+  "contact_form": ["Nome", "Assunto", "Mensagem"],
+  "contact_yup": [
+    "Nome é obrigatório",
+    "Endereço de email inválido",
+    "Email é obrigatório",
+    "Qual o assunto?",
+    "Qual é a sua mensagem?"
+  ],
+  "contact_btn": ["Diga olá", "Enviar"]
+}
