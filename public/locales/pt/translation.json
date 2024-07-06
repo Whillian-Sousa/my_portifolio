@@ -45,5 +45,6 @@
     "Qual o assunto?",
     "Qual é a sua mensagem?"
   ],
-  "contact_btn": ["Diga olá", "Enviar"]
+  "contact_btn": ["Diga olá", "Enviar"],
+  "footer_copy": "Desenvolvedor Web Freelance"
 }

@@ -45,5 +45,6 @@
     "What's the subject?",
     "What's your message?"
   ],
-  "contact_btn": ["Say hello", "Let's talk"]
+  "contact_btn": ["Diga olá", "Enviar"],
+  "footer_copy": "Freelance Web Developer"
 }

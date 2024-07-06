@@ -1,8 +1,10 @@
 import { cookie, favicon, mail } from "../assets";
 import Blurry from "./Blurry";
 import Socials from "./Socials";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation();
   return (
     <footer
       data-scroll-section
@@ -44,8 +46,8 @@ const Footer = () => {
             <div className="relative flex flex-col text-color-7 pt-5 max-sm:text-sm">
               <p className="whitespace-nowrap">
                 &copy; 2024 Whillian Sousa <br className="lg:hidden" />
-                <span className="hidden lg:inline-flex"> |</span> Freelance Web
-                Developer
+                <span className="hidden lg:inline-flex"> |</span>{" "}
+                {t("footer_copy")}
               </p>
               <span className="font-code text-color-7/40 pt-2 whitespace-nowrap">
                 God&apos;s in his heaven <br className="xl:hidden" />

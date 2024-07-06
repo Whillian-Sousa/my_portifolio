@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import TranslateButton from "./TranslateButton";
 import { motion } from "framer-motion";
 import { Trans, useTranslation } from "react-i18next";
+import LanguageSelector from "./LanguageSelector";
 
 const bcw = "BCW";
 
@@ -138,7 +139,7 @@ const Header = () => {
             </p>
           </motion.div>
         </motion.a>
-        <nav className="hidden md:block top-[5rem] left-0 right-0 mx-auto lg:pr-10 bg-transparent">
+        <nav className="hidden md:block top-[5rem] left-0 right-0 mx-auto pl-9 lg:pr-10 bg-transparent">
           <div className="z-2 flex items-center justify-center m-auto">
             {navigation.map((item) => (
               <a
@@ -155,9 +156,9 @@ const Header = () => {
             ))}
           </div>
         </nav>
+        <LanguageSelector />
 
         <div className="flex items-center lg:absolute right-5 xl:right-10 font-lexend gap-4 lg:gap-6">
-          {/* <LanguageSelector /> */}
           <a target="_blank" href="https://github.com/Whillian-Sousa">
             <TranslateButton src={github} title="Github" />
           </a>
