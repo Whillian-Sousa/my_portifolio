@@ -17,7 +17,7 @@ const LanguageSelector = () => {
       {languages.map((lng) => {
         return (
           <button
-            className={`px-[5px] py-[3px] rounded-md ${lng.code === i18n.language ? "bg-color-1 text-n-8 font-bold" : ""}`}
+            className={`px-[4px] py-[2px] rounded-[4px] ${lng.code === i18n.language ? "bg-color-1 text-n-8 font-bold" : ""}`}
             key={lng.code}
             onClick={() => changeLanguage(lng.code)}
           >

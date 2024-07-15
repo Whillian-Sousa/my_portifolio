@@ -5,7 +5,6 @@ import TechLogos from "./TechLogos";
 import ImageNoise from "./ImageNoise";
 import Inner from "./Inner";
 import { Trans, useTranslation } from "react-i18next";
-import LanguageSelector from "./LanguageSelector";
 
 const Hero = () => {
   const parallaxRef = useRef();
@@ -18,7 +17,6 @@ const Hero = () => {
         className="pt-[5.25rem] lg:pt-[6.25rem] xl:pt-[7.25rem]"
         id="hero"
       >
-        {/* <LanguageSelector /> */}
         <div className="container relative" ref={parallaxRef}>
           <div className="relative z-3 mx-auto text-center mb-16 md:mb-20 lg:mb-32">
             <p className="flex text-xs lg:text-base justify-center items-center gap-1 font-lexend font-light text-n-14">
