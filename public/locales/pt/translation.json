@@ -46,5 +46,10 @@
     "Qual é a sua mensagem?"
   ],
   "contact_btn": ["Diga olá", "Enviar"],
+  "contact_dialog": [
+    "Mensagem Enviada",
+    "Obrigado pelo seu contato",
+    "Click em mim para fechar"
+  ],
   "footer_copy": "Desenvolvedor Web Freelance"
 }

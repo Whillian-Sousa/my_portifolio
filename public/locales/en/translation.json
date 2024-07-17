@@ -46,5 +46,10 @@
     "What's your message?"
   ],
   "contact_btn": ["Say Hello", "Let's talk"],
+  "contact_dialog": [
+    "Message sent",
+    "Thank you for your contact",
+    "Click on me to close"
+  ],
   "footer_copy": "Freelance Web Developer"
 }

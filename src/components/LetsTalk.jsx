@@ -1,14 +1,16 @@
 import { useFormik } from "formik";
-import { favicon } from "../assets";
+import { favicon, mail } from "../assets";
 import * as Yup from "yup";
 import emailjs from "@emailjs/browser";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import Button from "./Button";
 import { Trans, useTranslation } from "react-i18next";
+import Modal from "./Modal";
 
 const LetsTalk = () => {
   const form = useRef();
   const { t } = useTranslation();
+  const [open, setOpen] = useState(false);
 
   //Formik
   const formik = useFormik({
@@ -33,6 +35,7 @@ const LetsTalk = () => {
     onSubmit: (values, { resetForm }) => {
       sendEmail();
       resetForm();
+      setOpen(true);
     },
   });
 
@@ -170,18 +173,37 @@ const LetsTalk = () => {
             {/* Button */}
             <Button
               className="justify-center"
-              popoverTarget="nav"
               img={favicon}
+              onClick={() => setOpen(true)}
               alt="Moon Icon"
               text={t(`contact_btn.0`)}
               subtext={t(`contact_btn.1`)}
             />
-            <div id="nav" popover="">
-              <h1>hello</h1>
-            </div>
           </form>
         </div>
       </div>
+      <Modal open={open} onClose={() => setOpen(false)}>
+        <div className="text-center w-screen">
+          <img
+            src={mail}
+            width={50}
+            height={50}
+            className="mx-auto"
+            alt="mail"
+          />
+          <div className="mx-auto mb-4">
+            <h3 className="text-2xl font-black my-2 text-color-1">
+              {t(`contact_dialog.0`)}
+            </h3>
+            <p className="text-color-7 font-lexend font-light mx-auto">
+              {t(`contact_dialog.1`)}
+            </p>
+            <p className="text-n-10 my-4 text-xs font-lexend font-light mx-auto">
+              {t(`contact_dialog.2`)}
+            </p>
+          </div>
+        </div>
+      </Modal>
     </section>
   );
 };
