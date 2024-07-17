@@ -4,7 +4,7 @@ const Modal = ({ open, onClose, children }) => {
   return (
     <div
       onClick={onClose}
-      className={`absolute overflow-hidden z-1 inset-0 flex justify-center items-center transition-colors ${open ? "visible backdrop-blur-lg" : "invisible"}`}
+      className={`absolute overflow-hidden z-1 inset-0 flex justify-center items-center transition-colors ${open ? "visible backdrop-blur-sm" : "invisible"}`}
     >
       <div
         // onClick={(e) => e.stopPropagation()}

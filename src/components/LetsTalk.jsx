@@ -174,7 +174,7 @@ const LetsTalk = () => {
             <Button
               className="justify-center"
               img={favicon}
-              onClick={() => setOpen(true)}
+              // onClick={() => setOpen(true)}
               alt="Moon Icon"
               text={t(`contact_btn.0`)}
               subtext={t(`contact_btn.1`)}
