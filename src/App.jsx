@@ -11,6 +11,7 @@ import { AnimatePresence } from "framer-motion";
 import Lenis from "lenis";
 import Showcase from "./components/Showcase";
 import NavBottom from "./components/NavBottom";
+import Work from "./components/Work";
 
 const App = () => {
   useEffect(() => {
@@ -48,6 +49,7 @@ const App = () => {
             <NavBottom />
             <Hero />
             <Showcase />
+            {/* <Work /> */}
           </div>
           <div className="relative">
             <div className="absolute inset-0 bg-form-gradient opacity-30" />

@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Tagline from "./Tagline";
 import { moon, star } from "../assets";
+import { useInView } from "framer-motion";
+import { useFeatureStore } from "../hooks/store";
 
 const ShowcaseComponents = ({
+  id,
   date,
   status,
   title,
@@ -10,8 +13,16 @@ const ShowcaseComponents = ({
   children,
   gradient,
 }) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref);
+  const setInViewFeature = useFeatureStore((state) => state.setInViewFeature);
+
+  useEffect(() => {
+    if (isInView) setInViewFeature(id);
+  }, [isInView, id, setInViewFeature]);
+
   return (
-    <div className="shadow-xl rounded-xl">
+    <div ref={ref} className="shadow-xl rounded-xl">
       <div className="relative p-7 md:p-10 lg:p-12 xl:p-15 rounded-2xl overflow-hidden">
         <div className="absolute inset-0 mix-blend-lighten opacity-20 bg-grainy-texture bg-cover bg-center" />
 
