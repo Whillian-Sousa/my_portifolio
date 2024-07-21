@@ -17,9 +17,9 @@ const Model = ({ progress }) => {
   return (
     <motion.group
       ref={group}
-      scale={viewport.width / 3.4}
+      // scale={viewport.width / 3.4}
       // scale={0.15}
-      // scale={2.3}
+      scale={2.3}
       rotation-y={progress}
       rotation-x={progress}
     >

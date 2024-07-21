@@ -18,7 +18,7 @@
   "vitrine_card_status": [{ "1": "Done" }, { "1": "In progress" }],
   "vitrine_card_title": [
     { "1": "<1>3D</1> scenes" },
-    { "1": "Animations" },
+    { "1": "<1>Animations</1>" },
     { "1": "<1>Buttons</1> & Hovers" },
     { "1": "<1>Scroll</1> everywhere" },
     { "text_animations": "Make your page <1 /> look" }

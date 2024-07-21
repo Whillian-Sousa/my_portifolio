@@ -1,9 +1,24 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Tagline from "./Tagline";
 import { moon, star } from "../assets";
-import { useMotionValue, useSpring, useTransform, motion } from "framer-motion";
+import {
+  useMotionValue,
+  useSpring,
+  useTransform,
+  motion,
+  useInView,
+} from "framer-motion";
+import { useFeatureStore } from "../hooks/store";
 
-const TiltCard = ({ date, status, title, text, children }) => {
+const TiltCard = ({ id, date, status, title, text, children }) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref);
+  const setInViewFeature = useFeatureStore((state) => state.setInViewFeature);
+
+  useEffect(() => {
+    if (isInView) setInViewFeature(id);
+  }, [isInView, id, setInViewFeature]);
+
   const x = useMotionValue(0);
   const y = useMotionValue(0);
 
@@ -48,6 +63,8 @@ const TiltCard = ({ date, status, title, text, children }) => {
 
   return (
     <motion.div
+      id={id}
+      ref={ref}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       style={{

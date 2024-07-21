@@ -48,8 +48,8 @@ const App = () => {
             <Header />
             <NavBottom />
             <Hero />
-            <Showcase />
-            {/* <Work /> */}
+            {/* <Showcase /> */}
+            <Work />
           </div>
           <div className="relative">
             <div className="absolute inset-0 bg-form-gradient opacity-30" />

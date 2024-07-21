@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import Tagline from "./Tagline";
 import { moon, star } from "../assets";
 import { useInView } from "framer-motion";
@@ -22,7 +22,7 @@ const ShowcaseComponents = ({
   }, [isInView, id, setInViewFeature]);
 
   return (
-    <div ref={ref} className="shadow-xl rounded-xl">
+    <div id={id} ref={ref} className="shadow-xl rounded-xl">
       <div className="relative p-7 md:p-10 lg:p-12 xl:p-15 rounded-2xl overflow-hidden">
         <div className="absolute inset-0 mix-blend-lighten opacity-20 bg-grainy-texture bg-cover bg-center" />
 
