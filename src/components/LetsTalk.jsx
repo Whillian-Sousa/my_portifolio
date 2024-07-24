@@ -6,11 +6,18 @@ import { useRef, useState } from "react";
 import Button from "./Button";
 import { Trans, useTranslation } from "react-i18next";
 import Modal from "./Modal";
+import { useEscapePress } from "../utils/use-escape-press";
 
 const LetsTalk = () => {
   const form = useRef();
   const { t } = useTranslation();
   const [open, setOpen] = useState(false);
+
+  const onEscapePress = () => {
+    if (open) setOpen(null);
+  };
+
+  useEscapePress(onEscapePress);
 
   //Formik
   const formik = useFormik({
@@ -183,7 +190,7 @@ const LetsTalk = () => {
         </div>
       </div>
       <Modal open={open} onClose={() => setOpen(false)}>
-        <div className="text-center w-screen">
+        <div className="text-center p-7 pb-15">
           <img
             src={mail}
             width={50}
@@ -197,9 +204,6 @@ const LetsTalk = () => {
             </h3>
             <p className="text-color-7 font-lexend font-light mx-auto">
               {t(`contact_dialog.1`)}
-            </p>
-            <p className="text-n-10 my-4 text-xs font-lexend font-light mx-auto">
-              {t(`contact_dialog.2`)}
             </p>
           </div>
         </div>

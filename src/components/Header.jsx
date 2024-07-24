@@ -163,7 +163,7 @@ const Header = () => {
             <TranslateButton src={github} title="Github" />
           </a>
           <a target="_blank" href="https://www.linkedin.com/in/whillian-sousa/">
-            <Button className="flex group absolute font-bold max-lg:text-sm min-width:fitcontent rounded-full transition-transform hover:transition-all bg-linear-gradient hover:pr-9 hover:scale-105 hover:pl-5 text-n-8">
+            <Button className=" group absolute font-bold max-lg:text-sm min-width:fitcontent rounded-full transition-transform hover:transition-all bg-linear-gradient hover:pr-9 hover:scale-105 hover:pl-5 text-n-8">
               {t("nav.4.button")}
               <span className="text-transparent text-xl absolute -right-6 -top-1 group-hover:text-n-8 m-0">
                 &rarr;

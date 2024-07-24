@@ -11,14 +11,16 @@ import MagneticButton from "./MagneticButton";
 import { favicon, moon, star } from "../assets";
 import TranslateButton from "./TranslateButton";
 import TiltCard from "./TiltCard";
-import { AnimatePresence, motion } from "framer-motion";
 
 const Btn = () => {
   return (
     <>
-      <MagneticButton url="#" iconUrl={favicon} title="Hover me -">
-        Hover Me!
-      </MagneticButton>
+      <MagneticButton
+        className="border"
+        url="#"
+        iconUrl={favicon}
+        title="Hover me -"
+      />
       <TranslateButton className="" border={true} src={moon} title="Click me" />
       <Button
         className="-mt-6 md:-mt-8"
@@ -78,31 +80,18 @@ const Work = () => {
   const { t } = useTranslation();
 
   return (
-    <div id="work" className="mx-auto container px-4">
-      <div className="flex w-full items-start gap-20">
-        <div className="sticky top-0 flex h-screen items-center w-full">
-          <div className="relative w-full aspect-square">
+    <section id="work" className="mx-auto xl:container xl:px-4 max-sm:p-5">
+      <div className="max-md:flex-col flex w-full items-start xl:gap-20">
+        <div className="md:sticky top-0 flex md:h-screen items-center w-full md:w-1/2">
+          <div className="relative w-full aspect-square max-sm:p-0 max-md:p-10">
             <Moon />
-            <AnimatePresence>
-              <motion.div
-                initial={{
-                  opacity: 0,
-                  y: 25,
-                }}
-                animate={{
-                  opacity: 1,
-                  y: 0,
-                }}
-              >
-                {features.map((feature) => (
-                  <feature.card id={feature.id} key={feature.id} />
-                ))}
-              </motion.div>
-            </AnimatePresence>
+            {features.map((feature) => (
+              <feature.card id={feature.id} key={feature.id} />
+            ))}
           </div>
         </div>
-        <div className="relative w-full py-[50vh]">
-          <h1 className="absolute w-full top-56 h1 font-lexend font-bold text-center text-color-7 ">
+        <div className="relative w-full md:w-1/2 py-[15vh] md:py-[50vh]">
+          <h1 className="absolute w-full top-0 sm:-top-5 md:top-56 h1 font-lexend font-bold text-center text-color-7 ">
             <Trans
               i18nKey={t("vitrine_h1")}
               components={{
@@ -110,7 +99,7 @@ const Work = () => {
               }}
             />
           </h1>
-          <ul className="flex flex-col gap-[5vh] md:gap-[20vh] xl:gap-[30vh] max-md:max-w-[25rem] max-xl:max-w-[35rem] xl:w-[35rem] mx-auto md:px-5 py20 lg:py[15vh]">
+          <ul className="flex flex-col gap-[5vh] md:gap-[20vh] xl:gap-[30vh] max-md:max-w-[25rem] max-xl:max-w-[35rem] xl:w-[35rem] mx-auto md:px-5 lg:py[15vh]">
             {features.map((feature) => (
               <li key={feature.id}>
                 <feature.right_card
@@ -134,7 +123,7 @@ const Work = () => {
           </ul>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

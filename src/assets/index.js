@@ -1,4 +1,6 @@
+import arrow from "./arrow-right.svg";
 import hero from "./hero.jpeg";
+import child from "./child.jpg";
 import cookie from "./cookie.svg";
 import github from "./github.svg";
 import githubSocials from "./github-socials.svg";
@@ -76,4 +78,6 @@ export {
   star,
   mail,
   cookie,
+  child,
+  arrow,
 };

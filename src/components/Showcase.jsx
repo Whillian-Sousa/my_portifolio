@@ -14,7 +14,7 @@ const Showcase = () => {
   const { t } = useTranslation();
 
   return (
-    <section id="work" className="">
+    <section id="work">
       <div className="xl:max-w-[90.5rem] mx-auto grid grid-cols-1 md:grid-cols-[50%] md:grid-flow-col px-5 md:px-5 lg:px-15 2xl:gap-20">
         {/* Moon */}
         <div className="relative w-full h-full mx-auto">

@@ -8,6 +8,8 @@
   ],
   "subtitle": "Desenvolvedor web | Web design | Freelence",
   "heroText": "Construa <1>seu mundo</1>, eleve <1>sua marca</1>. Ofereça ao seu cliente uma <1>experiência</1> que as redes sociais não podem oferecer.",
+  "bio": "Whillian Sousa, 37. Formado em administração e autodidata em programação. Me dedico ao Desenvolvimento Web no ecosistema React, com nextJs/vite e tailwind. Trabalho também com modelos 3d usando a biblioteca ThreeFiber. E em animações com gsap e framer-motion.",
+  "bio_btn": "Voltar ao site",
   "tolls": "<1>Ferramentas</1> do Whillian",
   "vitrine_h1": "Novos universos, <br /> <1>novas tecnologias</1>",
   "vitrine_card_data": [

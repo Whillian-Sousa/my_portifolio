@@ -1,33 +1,34 @@
 import React from "react";
 import GsapMagnetic from "./GsapMagnetic";
 
-const MagneticButton = ({ id, url, iconUrl, title, footer }) => {
+const MagneticButton = ({ id, url, iconUrl, title, className, onClick }) => {
   return (
-    <div className="">
+    <div>
       <GsapMagnetic key={id}>
         <div
           className={`relative flex w-fit ${id ? "py-5" : "scale-[1] sm:scale-105 md:scale-[1.15] lg:scale-125"}`}
         >
           <a
+            onClick={onClick}
             href={url}
             target="_blank"
-            className={`flex relative items-center justify-center rounded-full transition-colors hover:animate-spin-slow group ${id ? "size-[2.3rem] sm:size-[3rem] xl:size-[5rem]" : "size-[5rem] "}`}
+            className={`flex relative cursor-pointer items-center justify-center rounded-full transition-colors hover:animate-spin-slow group ${id ? "size-[2.3rem] sm:size-[3rem] xl:size-[5rem]" : "size-[5rem] "}`}
           >
             <div
               className={`absolute z-0 rounded-full bg-color-7 scale-0 transition-all duration-500 size-[8rem] group-hover:scale-100 ${id ? "opacity-20" : ""}`}
             />
             <div
-              className={`absolute z-0 rounded-full opacity-50 size-[8rem] ${id ? "" : "border"}`}
+              className={`absolute z-0 rounded-full opacity-50 transition-transform size-[8rem] ${className}`}
             />
             <img
-              className={`absolute group-hover:animate-despin  ${id ? "max-sm:scale-90" : "mix-blend-difference"}`}
+              className={`absolute group-hover:animate-despin ${id ? "max-sm:scale-90" : "mix-blend-difference"}`}
               src={iconUrl}
               width={30}
               height={30}
               alt={title}
             />
             <svg
-              className={`absolute z-1 scale-[0.275] group-hover:opacity-100 transition-all duration-700 group-hover: pointer-events-none ${id ? "opacity-0" : "mix-blend-difference"}`}
+              className={`absolute overflow-hidden z-1 scale-[0.275] group-hover:opacity-100 transition-all duration-700 group-hover: pointer-events-none ${id ? "opacity-0" : "mix-blend-difference"}`}
               width="640"
               height="480"
             >
