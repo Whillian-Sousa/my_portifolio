@@ -190,7 +190,7 @@ const LetsTalk = () => {
         </div>
       </div>
       <Modal open={open} onClose={() => setOpen(false)}>
-        <div className="text-center p-7 pb-15">
+        <div className="text-center p-3 sm:p-5 md:p-7 pb-12 sm:pb-12 md:pb-15">
           <img
             src={mail}
             width={50}
@@ -198,11 +198,11 @@ const LetsTalk = () => {
             className="mx-auto"
             alt="mail"
           />
-          <div className="mx-auto mb-4">
-            <h3 className="text-2xl font-black my-2 text-color-1">
+          <div className="mx-auto mb-1 md:mb-4">
+            <h3 className="text-[1.3rem] md:text-[1.5rem] font-black my-3 text-color-1">
               {t(`contact_dialog.0`)}
             </h3>
-            <p className="text-color-7 font-lexend font-light mx-auto">
+            <p className="text-color-7 text-sm md:text-base font-lexend font-light mx-auto">
               {t(`contact_dialog.1`)}
             </p>
           </div>

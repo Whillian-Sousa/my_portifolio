@@ -1,6 +1,8 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const Modal = ({ open, onClose, children }) => {
+  const { t } = useTranslation();
   return (
     <div
       className={`absolute overflow-hidden z-1 inset-0 flex justify-center items-center transition-colors ${open ? "visible backdrop-blur" : "invisible"}`}
@@ -12,10 +14,10 @@ const Modal = ({ open, onClose, children }) => {
         <div className="absolute inset-0 bg-noisy-texture opacity-10 rounded-xl" />
         {children}
         <button
-          className="fixed bottom-6 left-1/2 -translate-x-1/2 rounded-full bg-linear-gradient text-n-8 font-lexend text-sm px-4 py-2 z-10"
+          className="fixed bottom-6 left-1/2 -translate-x-1/2 rounded-full bg-linear-gradient text-n-8 font-lexend text-xs md:text-sm px-4 py-2 z-10"
           onClick={onClose}
         >
-          Back to site
+          {t("bio_btn")}
         </button>
       </div>
     </div>
