@@ -6,7 +6,7 @@ const TechLogos = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="relative pt-15 pb-15">
+    <div className="relative pt-24 pb-15">
       <div className="xl:container">
         <h1 className="h4 font-lexend text-center text-color-7">
           <Trans

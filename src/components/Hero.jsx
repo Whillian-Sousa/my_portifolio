@@ -114,16 +114,16 @@ const Hero = () => {
               </div>
             </div>
             <Bio open={open} onClose={() => setOpen(false)} />
-            <div className="feature-title flex text-color-7 mx-auto font-thin font-lexend text-center sm:leading-[2.5rem] lg:leading-[3rem] xl:absolute text-2xl sm:text-3xl lg:text-4xl max-w-[40rem] xl:w-[25rem] xl:left-[50rem] gap-1 xl:top-[28rem] xl:text-left">
-              {/* <div className="absolute right-1/2 -top-40 -rotate-45"> */}
-              {/*   <MagneticButton */}
-              {/*     onClick={() => setOpen(true)} */}
-              {/*     className="border border-color-7/50 opacity-1" */}
-              {/*     id={true} */}
-              {/*     iconUrl={arrow} */}
-              {/*     title="Bio - Bio -" */}
-              {/*   /> */}
-              {/* </div> */}
+            <div className="feature-title relative flex text-color-7 mx-auto font-thin font-lexend text-center sm:leading-[2.5rem] lg:leading-[3rem] xl:absolute text-2xl sm:text-3xl lg:text-4xl max-w-[40rem] xl:w-[25rem] xl:left-[50rem] gap-1 top-5 xl:top-[28rem] xl:text-left">
+              <div className="absolute scale-75 sm:scale-[0.8] md:scale-100 right-8 sm:right-10 xl:right-1/2 -top-28 md:-top-32 xl:-top-40 -rotate-45 mix-blend-exclusion">
+                <MagneticButton
+                  onClick={() => setOpen(true)}
+                  className="border border-color-7/50 opacity-1"
+                  id={true}
+                  iconUrl={arrow}
+                  title="Bio - Bio -"
+                />
+              </div>
               <p className="feature-title sm:pb-15 md:pb-20">
                 <Trans
                   i18nKey={t("heroText")}
@@ -136,7 +136,7 @@ const Hero = () => {
               </p>
             </div>
             <button
-              className="back-to-site fixed bottom-10 left-1/2 -translate-x-1/2 opacity-0 translate-y-[300%] rounded-full bg-linear-gradient text-n-8 font-lexend px-4 py-2 z-10"
+              className="back-to-site fixed bottom-20 sm:bottom-24 md:bottom-10 right-10 lg:right-1/2 translate-x-1/2 opacity-0 translate-y-[300%] rounded-full bg-linear-gradient text-xs md:text-base text-n-8 font-lexend px-4 py-2 z-10"
               onClick={() => setOpen(false)}
             >
               {t("bio_btn")}
